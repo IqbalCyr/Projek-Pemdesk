@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows</TargetFramework>
     <RootNamespace>Purple_Laundry_TEST</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>Purple_Laundry_TEST.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
