@@ -34,7 +34,10 @@
     <Folder Include="Data\" />
     <Folder Include="Model\" />
     <Folder Include="Controller\" />
-    <Folder Include="Config\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="26.10.0" />
   </ItemGroup>
 
 </Project>
