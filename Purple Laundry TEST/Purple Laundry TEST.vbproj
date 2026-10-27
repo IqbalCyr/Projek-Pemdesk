@@ -30,4 +30,11 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Model\" />
+    <Folder Include="Controller\" />
+    <Folder Include="Config\" />
+  </ItemGroup>
+
 </Project>
