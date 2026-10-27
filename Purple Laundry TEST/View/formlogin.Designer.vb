@@ -44,7 +44,7 @@ Partial Class formlogin
         ' Cbktsndi
         ' 
         Cbktsndi.AutoSize = True
-        Cbktsndi.Font = New Font("Segoe UI", 7F)
+        Cbktsndi.Font = New Font("Segoe UI", 7.0F)
         Cbktsndi.Location = New Point(209, 307)
         Cbktsndi.Name = "Cbktsndi"
         Cbktsndi.Size = New Size(163, 23)
@@ -55,7 +55,7 @@ Partial Class formlogin
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Showcard Gothic", 30F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Showcard Gothic", 30.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(152, 20)
         Label1.Name = "Label1"
         Label1.Size = New Size(547, 74)
@@ -65,7 +65,7 @@ Partial Class formlogin
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 9F)
+        Label2.Font = New Font("Segoe UI", 9.0F)
         Label2.Location = New Point(209, 154)
         Label2.Name = "Label2"
         Label2.Size = New Size(59, 25)
@@ -105,7 +105,7 @@ Partial Class formlogin
         ' 
         ' formlogin
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
         Controls.Add(TextBox2)
@@ -120,7 +120,6 @@ Partial Class formlogin
         Name = "formlogin"
         StartPosition = FormStartPosition.CenterScreen
         Text = "formlogin"
-        WindowState = FormWindowState.Maximized
         ResumeLayout(False)
         PerformLayout()
     End Sub
