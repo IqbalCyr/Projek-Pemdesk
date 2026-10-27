@@ -32,4 +32,8 @@
     Private Sub Cbktsndi_CheckedChanged(sender As Object, e As EventArgs) Handles Cbktsndi.CheckedChanged
 
     End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
 End Class
