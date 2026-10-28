@@ -7,6 +7,11 @@
             MsgBox("Kata Sandi Tidak Boleh kosong")
         End If
         Dim sesiKasir As Kasir = loggin(TextBox1.Text, TextBox2.Text)
+        If sesiKasir IsNot Nothing Then
+            MsgBox($"Selamat Datang kasir : {sesiKasir.Nama}")
+            Me.Hide()
+            MainMenu.Show()
+        End If
 
     End Sub
 
