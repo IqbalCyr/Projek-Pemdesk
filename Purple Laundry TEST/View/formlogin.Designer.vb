@@ -34,9 +34,10 @@ Partial Class formlogin
         ' 
         ' btnmsk
         ' 
-        btnmsk.Location = New Point(209, 360)
+        btnmsk.Location = New Point(167, 288)
+        btnmsk.Margin = New Padding(2)
         btnmsk.Name = "btnmsk"
-        btnmsk.Size = New Size(402, 34)
+        btnmsk.Size = New Size(322, 27)
         btnmsk.TabIndex = 0
         btnmsk.Text = "MASUK"
         btnmsk.UseVisualStyleBackColor = True
@@ -44,10 +45,11 @@ Partial Class formlogin
         ' Cbktsndi
         ' 
         Cbktsndi.AutoSize = True
-        Cbktsndi.Font = New Font("Segoe UI", 7.0F)
-        Cbktsndi.Location = New Point(209, 307)
+        Cbktsndi.Font = New Font("Segoe UI", 7F)
+        Cbktsndi.Location = New Point(167, 246)
+        Cbktsndi.Margin = New Padding(2)
         Cbktsndi.Name = "Cbktsndi"
-        Cbktsndi.Size = New Size(163, 23)
+        Cbktsndi.Size = New Size(142, 19)
         Cbktsndi.TabIndex = 1
         Cbktsndi.Text = "Tampilkan Kata Sandi"
         Cbktsndi.UseVisualStyleBackColor = True
@@ -55,59 +57,66 @@ Partial Class formlogin
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Showcard Gothic", 30.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label1.Location = New Point(152, 20)
+        Label1.Font = New Font("Showcard Gothic", 30F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(122, 16)
+        Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(547, 74)
+        Label1.Size = New Size(455, 62)
         Label1.TabIndex = 2
         Label1.Text = "PURPLE LAUNDRY"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 9.0F)
-        Label2.Location = New Point(209, 154)
+        Label2.Font = New Font("Segoe UI", 9F)
+        Label2.Location = New Point(167, 123)
+        Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(59, 25)
+        Label2.Size = New Size(49, 20)
         Label2.TabIndex = 3
         Label2.Text = "Nama"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(209, 231)
+        Label3.Location = New Point(167, 185)
+        Label3.Margin = New Padding(2, 0, 2, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(95, 25)
+        Label3.Size = New Size(80, 20)
         Label3.TabIndex = 4
         Label3.Text = "Kata Sandi"
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(209, 182)
+        TextBox1.Location = New Point(167, 146)
+        TextBox1.Margin = New Padding(2)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(402, 31)
+        TextBox1.Size = New Size(322, 27)
         TextBox1.TabIndex = 5
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(369, 213)
+        Label4.Location = New Point(295, 170)
+        Label4.Margin = New Padding(2, 0, 2, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(0, 25)
+        Label4.Size = New Size(0, 20)
         Label4.TabIndex = 6
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(209, 259)
+        TextBox2.Location = New Point(167, 207)
+        TextBox2.Margin = New Padding(2)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(402, 31)
+        TextBox2.Size = New Size(322, 27)
         TextBox2.TabIndex = 7
+        TextBox2.UseSystemPasswordChar = True
         ' 
         ' formlogin
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(640, 360)
         Controls.Add(TextBox2)
         Controls.Add(Label4)
         Controls.Add(TextBox1)
@@ -117,6 +126,7 @@ Partial Class formlogin
         Controls.Add(Cbktsndi)
         Controls.Add(btnmsk)
         ForeColor = Color.Purple
+        Margin = New Padding(2)
         Name = "formlogin"
         StartPosition = FormStartPosition.CenterScreen
         Text = "formlogin"

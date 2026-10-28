@@ -1,5 +1,17 @@
 ﻿Public Class formlogin
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnmsk.Click
+        If TextBox1.Text = "" Then
+            MsgBox("Nama Tidak Boleh Kosong")
+        End If
+        If TextBox2.Text = "" Then
+            MsgBox("Kata Sandi Tidak Boleh kosong")
+        End If
+        Dim sesiKasir As Kasir = loggin(TextBox1.Text, TextBox2.Text)
+        If sesiKasir IsNot Nothing Then
+            MsgBox($"Selamat Datang kasir : {sesiKasir.Nama}")
+            Me.Hide()
+            MainMenu.Show()
+        End If
 
     End Sub
 
@@ -30,7 +42,7 @@
     End Sub
 
     Private Sub Cbktsndi_CheckedChanged(sender As Object, e As EventArgs) Handles Cbktsndi.CheckedChanged
-
+        TextBox2.UseSystemPasswordChar = False
     End Sub
 
     Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
