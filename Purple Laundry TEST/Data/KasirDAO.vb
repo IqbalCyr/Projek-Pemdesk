@@ -22,10 +22,10 @@ Module KasirDAO
                                     reader("password").ToString()
                                     )
                             Else
-                                MsgBox("Kata sandi tidak ditemukan!!!")
+                                MsgBox("Kata sandi salah!!!")
                             End If
                         Else
-                            MsgBox("Nama salah akun tidak ditemukan!!")
+                            MsgBox("Nama Akun tersebut tidak terdaftar!!!")
 
                         End If
                     End Using
