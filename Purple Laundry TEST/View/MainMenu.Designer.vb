@@ -22,41 +22,17 @@ Partial Class MainMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        Button1 = New Button()
         SuspendLayout()
         ' 
-        ' Label1
+        ' MainMenu
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(417, 63)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(53, 20)
-        Label1.TabIndex = 0
-        Label1.Text = "Label1"
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(437, 140)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(94, 29)
-        Button1.TabIndex = 1
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' menu
-        ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Controls.Add(Button1)
-        Controls.Add(Label1)
-        Name = "menu"
+        BackColor = Color.White
+        ClientSize = New Size(700, 338)
+        Margin = New Padding(3, 2, 3, 2)
+        Name = "MainMenu"
         Text = "menu"
         ResumeLayout(False)
-        PerformLayout()
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
 End Class
