@@ -12,8 +12,10 @@
             KasirAktif = loggin(TextBox1.Text, TextBox2.Text)
 
         End If
-        If KasirAktif IsNot Nothing Then
-
+        Dim sesiKasir As Kasir = loggin(TextBox1.Text, TextBox2.Text)
+        If sesiKasir IsNot Nothing Then
+            KasirAktif = sesiKasir
+            MsgBox($"Selamat Datang kasir : {sesiKasir.Nama}")
             Me.Hide()
             MainMenu.Show()
         End If
