@@ -23,11 +23,11 @@ Partial Class TambahPelanggan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TambahPelanggan))
-        TextBox1 = New TextBox()
+        txtNama = New TextBox()
         Label1 = New Label()
         Label2 = New Label()
-        TextBox2 = New TextBox()
-        Button1 = New Button()
+        txtNohp = New TextBox()
+        btnTmbh = New Button()
         MenuStrip1 = New MenuStrip()
         MenuAkun = New ToolStripMenuItem()
         LogOut = New ToolStripMenuItem()
@@ -40,12 +40,12 @@ Partial Class TambahPelanggan
         MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' TextBox1
+        ' txtNama
         ' 
-        TextBox1.Location = New Point(338, 205)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(283, 27)
-        TextBox1.TabIndex = 0
+        txtNama.Location = New Point(338, 205)
+        txtNama.Name = "txtNama"
+        txtNama.Size = New Size(283, 27)
+        txtNama.TabIndex = 0
         ' 
         ' Label1
         ' 
@@ -66,21 +66,21 @@ Partial Class TambahPelanggan
         Label2.TabIndex = 3
         Label2.Text = "No HP:"
         ' 
-        ' TextBox2
+        ' txtNohp
         ' 
-        TextBox2.Location = New Point(338, 243)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(201, 27)
-        TextBox2.TabIndex = 2
+        txtNohp.Location = New Point(338, 243)
+        txtNohp.Name = "txtNohp"
+        txtNohp.Size = New Size(201, 27)
+        txtNohp.TabIndex = 2
         ' 
-        ' Button1
+        ' btnTmbh
         ' 
-        Button1.Location = New Point(500, 286)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(121, 33)
-        Button1.TabIndex = 4
-        Button1.Text = "Tambah"
-        Button1.UseVisualStyleBackColor = True
+        btnTmbh.Location = New Point(500, 286)
+        btnTmbh.Name = "btnTmbh"
+        btnTmbh.Size = New Size(121, 33)
+        btnTmbh.TabIndex = 4
+        btnTmbh.Text = "Tambah"
+        btnTmbh.UseVisualStyleBackColor = True
         ' 
         ' MenuStrip1
         ' 
@@ -91,7 +91,7 @@ Partial Class TambahPelanggan
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
         MenuStrip1.Padding = New Padding(7, 3, 0, 3)
-        MenuStrip1.Size = New Size(845, 38)
+        MenuStrip1.Size = New Size(874, 38)
         MenuStrip1.TabIndex = 5
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -168,14 +168,14 @@ Partial Class TambahPelanggan
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(845, 427)
+        ClientSize = New Size(874, 460)
         Controls.Add(Judul)
         Controls.Add(MenuStrip1)
-        Controls.Add(Button1)
+        Controls.Add(btnTmbh)
         Controls.Add(Label2)
-        Controls.Add(TextBox2)
+        Controls.Add(txtNohp)
         Controls.Add(Label1)
-        Controls.Add(TextBox1)
+        Controls.Add(txtNama)
         ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
         Name = "TambahPelanggan"
         Text = "TambahPelanggan"
@@ -185,11 +185,11 @@ Partial Class TambahPelanggan
         PerformLayout()
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNama As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents txtNohp As TextBox
+    Friend WithEvents btnTmbh As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents MenuAkun As ToolStripMenuItem
     Friend WithEvents LogOut As ToolStripMenuItem
