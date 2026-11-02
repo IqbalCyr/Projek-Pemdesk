@@ -32,10 +32,9 @@ Public Class FormBuatPesanan
         Next
     End Sub
 
-
-
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadAutoCompletePelanggan()
+
     End Sub
 
     Private Sub Txt_NmPelanggan_TextChanged(sender As Object, e As EventArgs) Handles Txt_NmPelanggan.TextChanged
@@ -55,8 +54,8 @@ Public Class FormBuatPesanan
 
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles Txt_Berat.TextChanged
-
+    Private Sub Txt_Berat_ValueChanged(sender As Object, e As EventArgs) Handles Txt_Berat.ValueChanged
+        ' Anda bisa menambahkan logika otomatis hitung di sini jika diinginkan saat nilai berat diganti
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Combo_Tipe.SelectedIndexChanged
@@ -72,37 +71,37 @@ Public Class FormBuatPesanan
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_Hitung.Click
-        If Txt_Berat.Text = "" Or Combo_Tipe.SelectedIndex = -1 Or Combo_Layanan.SelectedIndex = -1 Then
+        ' Validasi menggunakan NumericUpDown.Value
+        If Txt_Berat.Value = 0 Or Combo_Tipe.SelectedIndex = -1 Or Combo_Layanan.SelectedIndex = -1 Then
             MsgBox("Mohon isi berat cucian, tipe cucian, dan layanan terlebih dahulu!", vbExclamation, "Peringatan")
             Return
         End If
 
-        ' Berat tipe data float, tapi dihitung sebagai integer (pembulatan/konversi ke int)
-        Dim beratFloat As Single = Val(Txt_Berat.Text)
-            Dim beratInt As Integer = CInt(Math.Floor(beratFloat)) ' atau CInt(beratFloat) sesuai kebutuhan
+        ' Mengambil nilai berat langsung sebagai Integer dari NumericUpDown
+        Dim beratInt As Integer = CInt(Txt_Berat.Value)
 
-            Dim hargaTipe As Integer = 0
-            If Combo_Tipe.SelectedItem.ToString() = "Cuci Lipat" Then
-                hargaTipe = 13000
-            ElseIf Combo_Tipe.SelectedItem.ToString() = "Cuci Setrika" Then
-                hargaTipe = 17000
-            End If
+        Dim hargaTipe As Integer = 0
+        If Combo_Tipe.SelectedItem.ToString() = "Cuci Lipat" Then
+            hargaTipe = 13000
+        ElseIf Combo_Tipe.SelectedItem.ToString() = "Cuci Setrika" Then
+            hargaTipe = 17000
+        End If
 
-            Dim biayaLayanan As Integer = 0
-            If Combo_Layanan.SelectedItem.ToString() = "Express" Then
-                biayaLayanan = 4000
-            Else
-                biayaLayanan = 0
-            End If
+        Dim biayaLayanan As Integer = 0
+        If Combo_Layanan.SelectedItem.ToString() = "Express" Then
+            biayaLayanan = 4000
+        Else
+            biayaLayanan = 0
+        End If
 
-            Dim totalHarga As Integer = 0
+        Dim totalHarga As Integer = 0
 
-            ' Rumus Total Harga sesuai ketentuan
-            If beratInt <= 5 Then
-                totalHarga = hargaTipe + biayaLayanan
-            Else
-                totalHarga = hargaTipe + ((beratInt - 5) * 5000) + biayaLayanan
-            End If
+        ' Rumus Total Harga sesuai ketentuan
+        If beratInt <= 5 Then
+            totalHarga = hargaTipe + biayaLayanan
+        Else
+            totalHarga = hargaTipe + ((beratInt - 5) * 5000) + biayaLayanan
+        End If
 
         Txt_Total.Text = totalHarga.ToString()
     End Sub
@@ -112,18 +111,19 @@ Public Class FormBuatPesanan
             MsgBox("Data pesanan belum lengkap atau hitung total harga terlebih dahulu!", vbExclamation, "Peringatan")
             Return
         End If
+
         ' Format tanggal masuk dan tanggal selesai
         Dim tglMasuk As String = DateTime.Now.ToString("yyyy-MM-dd")
-            Dim hariSelesai As Integer = If(Combo_Layanan.SelectedItem.ToString() = "Express", 1, 3)
-            Dim tglSelesai As String = DateTime.Now.AddDays(hariSelesai).ToString("yyyy-MM-dd")
+        Dim hariSelesai As Integer = If(Combo_Layanan.SelectedItem.ToString() = "Express", 1, 3)
+        Dim tglSelesai As String = DateTime.Now.AddDays(hariSelesai).ToString("yyyy-MM-dd")
 
-            ' Menggunakan MySqlDataAdapter dengan string perintah INSERT langsung sesuai gaya dosen
-            da = New MySqlDataAdapter("INSERT INTO pesanan (id_pelanggan, id_kasir, berat, tipe_cucian, layanan, total_harga, tanggal_masuk, tanggal_selesai, Status) VALUES ('" & CInt(idPelangganSelected) & "', '" & CInt(KasirAktif.Id_Kasir) & "', '" & CType(Val(Txt_Berat.Text), Single) & "', '" & CStr(Combo_Tipe.SelectedItem.ToString()) & "', '" & CType(Combo_Layanan.SelectedItem.ToString(), String) & "', '" & CInt(Txt_Total.Text) & "', '" & tglMasuk & "', '" & tglSelesai & "', 'Proses')", conn)
+        ' Menyimpan data berat menggunakan Txt_Berat.Value
+        da = New MySqlDataAdapter("INSERT INTO pesanan (id_pelanggan, id_kasir, berat, tipe_cucian, layanan, total_harga, tanggal_masuk, tanggal_selesai, Status) VALUES ('" & CInt(idPelangganSelected) & "', '" & CInt(KasirAktif.Id_Kasir) & "', '" & CInt(Txt_Berat.Value) & "', '" & CStr(Combo_Tipe.SelectedItem.ToString()) & "', '" & CType(Combo_Layanan.SelectedItem.ToString(), String) & "', '" & CInt(Txt_Total.Text) & "', '" & tglMasuk & "', '" & tglSelesai & "', 'Proses')", conn)
 
-            Dim dsInsert As New DataSet
-            da.Fill(dsInsert, "pesanan")
+        Dim dsInsert As New DataSet
+        da.Fill(dsInsert, "pesanan")
 
-            MsgBox("Pesanan berhasil disimpan")
+        MsgBox("Pesanan berhasil disimpan")
         ClearForm()
 
     End Sub
@@ -131,7 +131,7 @@ Public Class FormBuatPesanan
     Sub ClearForm()
         Txt_NmPelanggan.Text = ""
         Txt_NoHp.Text = ""
-        Txt_Berat.Text = ""
+        Txt_Berat.Value = 0 ' Reset NumericUpDown ke angka 0
         Combo_Tipe.SelectedIndex = -1
         Combo_Layanan.SelectedIndex = -1
         Txt_Total.Text = ""
@@ -144,31 +144,31 @@ Public Class FormBuatPesanan
         MainMenu.Show()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
+    ' Sisa event handler lainnya dibiarkan tetap
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click, Label2.Click, Label3.Click, Label4.Click, Label6.Click, Label5.Click, Label7.Click
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
+    Private Sub MenuAkun_Click(sender As Object, e As EventArgs) Handles MenuAkun.Click
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
+    Private Sub LogOut_Click(sender As Object, e As EventArgs) Handles LogOut.Click
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
+    Private Sub PELANGGAN_Click(sender As Object, e As EventArgs) Handles PELANGGAN.Click
     End Sub
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
+    Private Sub TambahPelanggan_Click(sender As Object, e As EventArgs) Handles TambahPelanggan.Click
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+    Private Sub EditPelanggan_Click(sender As Object, e As EventArgs) Handles EditPelanggan.Click
+    End Sub
 
+    Private Sub HapusPelanggan_Click(sender As Object, e As EventArgs) Handles HapusPelanggan.Click
+    End Sub
+
+    Private Sub DAFTARPESANAN_Click(sender As Object, e As EventArgs) Handles DAFTARPESANAN.Click
     End Sub
 End Class
