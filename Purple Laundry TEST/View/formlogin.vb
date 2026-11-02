@@ -1,6 +1,6 @@
 ﻿Public Class formlogin
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnmsk.Click
-        Dim sesikasir As Kasir = Nothing
+        KasirAktif = Nothing
         If TextBox1.Text = "" And TextBox2.Text = "" Then
             MsgBox("Mohin isi data diri anda terlebih dahulu")
         ElseIf TextBox1.Text = "" Then
@@ -9,11 +9,11 @@
         ElseIf TextBox2.Text = "" Then
             MsgBox("Kata Sandi Tidak Boleh kosong")
         Else
-            sesikasir = loggin(TextBox1.Text, TextBox2.Text)
+            KasirAktif = loggin(TextBox1.Text, TextBox2.Text)
 
         End If
-        If sesiKasir IsNot Nothing Then
-            MsgBox($"Selamat Datang kasir : {sesiKasir.Nama}")
+        If KasirAktif IsNot Nothing Then
+
             Me.Hide()
             MainMenu.Show()
         End If
