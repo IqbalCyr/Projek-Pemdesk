@@ -41,11 +41,13 @@
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
+        Me.Hide()
+        FormBuatPesanan.Show()
     End Sub
 
     Private Sub Pesanan_Click(sender As Object, e As EventArgs) Handles Pesanan.Click
-
+        Me.Hide()
+        FormBuatPesanan.Show()
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
