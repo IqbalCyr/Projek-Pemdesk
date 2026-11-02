@@ -1,6 +1,6 @@
 ﻿Public Class MainMenu
 
-    Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load, MyBase.Activated
         MenuAkun.Text = KasirAktif.Nama
         listpesanan = loadpesanan()
 
