@@ -54,7 +54,7 @@ Public Class FormBuatPesanan
 
     End Sub
 
-    Private Sub Txt_Berat_ValueChanged(sender As Object, e As EventArgs) Handles Txt_Berat.ValueChanged
+    Private Sub Txt_Berat_ValueChanged(sender As Object, e As EventArgs) Handles Nmr_Berat.ValueChanged
         ' Anda bisa menambahkan logika otomatis hitung di sini jika diinginkan saat nilai berat diganti
     End Sub
 
@@ -66,20 +66,14 @@ Public Class FormBuatPesanan
 
     End Sub
 
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles Txt_Total.TextChanged
-
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_Hitung.Click
         ' Validasi menggunakan NumericUpDown.Value
-        If Txt_Berat.Value = 0 Or Combo_Tipe.SelectedIndex = -1 Or Combo_Layanan.SelectedIndex = -1 Then
+        If Nmr_Berat.Value = 0 Or Combo_Tipe.SelectedIndex = -1 Or Combo_Layanan.SelectedIndex = -1 Then
             MsgBox("Mohon isi berat cucian, tipe cucian, dan layanan terlebih dahulu!", vbExclamation, "Peringatan")
             Return
         End If
 
         ' Mengambil nilai berat langsung sebagai Integer dari NumericUpDown
-        Dim beratInt As Integer = CInt(Txt_Berat.Value)
-
         Dim hargaTipe As Integer = 0
         If Combo_Tipe.SelectedItem.ToString() = "Cuci Lipat" Then
             hargaTipe = 13000
@@ -97,18 +91,26 @@ Public Class FormBuatPesanan
         Dim totalHarga As Integer = 0
 
         ' Rumus Total Harga sesuai ketentuan
-        If beratInt <= 5 Then
+        If Nmr_Berat.Value <= 5 Then
             totalHarga = hargaTipe + biayaLayanan
         Else
-            totalHarga = hargaTipe + ((beratInt - 5) * 5000) + biayaLayanan
+            totalHarga = hargaTipe + ((Nmr_Berat.Value - 5) * 5000) + biayaLayanan
         End If
 
-        Txt_Total.Text = totalHarga.ToString()
+        Lbl_Total.Text = "Rp " & totalHarga.ToString("#,##0")
+        Lbl_Total.Visible = True
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Btn_Simpan.Click
-        If idPelangganSelected = 0 Or Txt_Total.Text = "" Or Combo_Tipe.SelectedIndex = -1 Or Combo_Layanan.SelectedIndex = -1 Then
+        ' Validasi kelengkapan data
+        If idPelangganSelected = 0 Or Lbl_Total.Text = "Rp 0" Or Combo_Tipe.SelectedIndex = -1 Or Combo_Layanan.SelectedIndex = -1 Then
             MsgBox("Data pesanan belum lengkap atau hitung total harga terlebih dahulu!", vbExclamation, "Peringatan")
+            Return
+        End If
+
+        ' Pastikan KasirAktif tidak kosong untuk menghindari NullReferenceException pada ID Kasir
+        If KasirAktif Is Nothing Then
+            MsgBox("Sesi kasir tidak valid. Silakan login ulang.", vbCritical, "Error")
             Return
         End If
 
@@ -117,29 +119,44 @@ Public Class FormBuatPesanan
         Dim hariSelesai As Integer = If(Combo_Layanan.SelectedItem.ToString() = "Express", 1, 3)
         Dim tglSelesai As String = DateTime.Now.AddDays(hariSelesai).ToString("yyyy-MM-dd")
 
-        ' Menyimpan data berat menggunakan Txt_Berat.Value
-        da = New MySqlDataAdapter("INSERT INTO pesanan (id_pelanggan, id_kasir, berat, tipe_cucian, layanan, total_harga, tanggal_masuk, tanggal_selesai, Status) VALUES ('" & CInt(idPelangganSelected) & "', '" & CInt(KasirAktif.Id_Kasir) & "', '" & CInt(Txt_Berat.Value) & "', '" & CStr(Combo_Tipe.SelectedItem.ToString()) & "', '" & CType(Combo_Layanan.SelectedItem.ToString(), String) & "', '" & CInt(Txt_Total.Text) & "', '" & tglMasuk & "', '" & tglSelesai & "', 'Proses')", conn)
+        Try
+            ' Perintah INSERT menggunakan Nmr_Berat.Value
+            Dim query As String = "INSERT INTO pesanan (id_pelanggan, id_kasir, berat, tipe_cucian, layanan, total_harga, tanggal_masuk, tanggal_selesai, Status) VALUES (" &
+                                  idPelangganSelected & ", " &
+                                  KasirAktif.Id_Kasir & ", " &
+                                  Nmr_Berat.Value & ", '" &
+                                  Combo_Tipe.SelectedItem.ToString() & "', '" &
+                                  Combo_Layanan.SelectedItem.ToString() & "', " &
+                                  CInt(Lbl_Total.Text.Replace("Rp ", "").Replace(",", "")) & ", '" &
+                                  tglMasuk & "', '" &
+                                  tglSelesai & "', 'Proses')"
 
-        Dim dsInsert As New DataSet
-        da.Fill(dsInsert, "pesanan")
+            da = New MySqlDataAdapter(query, conn)
+            Dim dsInsert As New DataSet
+            da.Fill(dsInsert, "pesanan")
 
-        MsgBox("Pesanan berhasil disimpan")
-        ClearForm()
+            MsgBox("Pesanan berhasil disimpan", vbInformation, "Sukses")
+            ClearForm()
 
+        Catch ex As Exception
+            MsgBox("Terjadi kesalahan saat menyimpan: " & ex.Message, vbCritical, "Error Database")
+        End Try
     End Sub
 
     Sub ClearForm()
         Txt_NmPelanggan.Text = ""
         Txt_NoHp.Text = ""
-        Txt_Berat.Value = 0 ' Reset NumericUpDown ke angka 0
+        Nmr_Berat.Value = 0
         Combo_Tipe.SelectedIndex = -1
         Combo_Layanan.SelectedIndex = -1
-        Txt_Total.Text = ""
+        Lbl_Total.Text = "Rp 0"
+        Lbl_Total.Visible = False
         idPelangganSelected = 0
         Txt_NmPelanggan.Focus()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Btn_Kembali.Click
+        ClearForm()
         Me.Hide()
         MainMenu.Show()
     End Sub
@@ -170,5 +187,9 @@ Public Class FormBuatPesanan
     End Sub
 
     Private Sub DAFTARPESANAN_Click(sender As Object, e As EventArgs) Handles DAFTARPESANAN.Click
+    End Sub
+
+    Private Sub Lbl_total_Click(sender As Object, e As EventArgs) Handles Lbl_Total.Click
+
     End Sub
 End Class

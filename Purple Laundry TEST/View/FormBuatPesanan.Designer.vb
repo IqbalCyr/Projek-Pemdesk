@@ -26,7 +26,6 @@ Partial Class FormBuatPesanan
         Txt_NoHp = New TextBox()
         Combo_Tipe = New ComboBox()
         Combo_Layanan = New ComboBox()
-        Txt_Total = New TextBox()
         Btn_Hitung = New Button()
         Btn_Simpan = New Button()
         Btn_Kembali = New Button()
@@ -46,14 +45,15 @@ Partial Class FormBuatPesanan
         EditPelanggan = New ToolStripMenuItem()
         HapusPelanggan = New ToolStripMenuItem()
         DAFTARPESANAN = New ToolStripMenuItem()
-        Txt_Berat = New NumericUpDown()
+        Nmr_Berat = New NumericUpDown()
+        Lbl_Total = New Label()
         MenuStrip1.SuspendLayout()
-        CType(Txt_Berat, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Nmr_Berat, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Txt_NoHp
         ' 
-        Txt_NoHp.Font = New Font("Segoe UI", 10.0F)
+        Txt_NoHp.Font = New Font("Segoe UI", 10F)
         Txt_NoHp.Location = New Point(12, 120)
         Txt_NoHp.Name = "Txt_NoHp"
         Txt_NoHp.Size = New Size(228, 25)
@@ -61,7 +61,7 @@ Partial Class FormBuatPesanan
         ' 
         ' Combo_Tipe
         ' 
-        Combo_Tipe.Font = New Font("Segoe UI", 10.0F)
+        Combo_Tipe.Font = New Font("Segoe UI", 10F)
         Combo_Tipe.FormattingEnabled = True
         Combo_Tipe.Items.AddRange(New Object() {"Cuci Lipat", "Cuci Setrika"})
         Combo_Tipe.Location = New Point(119, 211)
@@ -71,21 +71,13 @@ Partial Class FormBuatPesanan
         ' 
         ' Combo_Layanan
         ' 
-        Combo_Layanan.Font = New Font("Segoe UI", 10.0F)
+        Combo_Layanan.Font = New Font("Segoe UI", 10F)
         Combo_Layanan.FormattingEnabled = True
         Combo_Layanan.Items.AddRange(New Object() {"Reguler", "Express"})
         Combo_Layanan.Location = New Point(119, 242)
         Combo_Layanan.Name = "Combo_Layanan"
         Combo_Layanan.Size = New Size(150, 25)
         Combo_Layanan.TabIndex = 4
-        ' 
-        ' Txt_Total
-        ' 
-        Txt_Total.Font = New Font("Segoe UI", 10.0F)
-        Txt_Total.Location = New Point(119, 324)
-        Txt_Total.Name = "Txt_Total"
-        Txt_Total.Size = New Size(150, 25)
-        Txt_Total.TabIndex = 5
         ' 
         ' Btn_Hitung
         ' 
@@ -102,19 +94,19 @@ Partial Class FormBuatPesanan
         ' Btn_Simpan
         ' 
         Btn_Simpan.BackColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Btn_Simpan.Font = New Font("Segoe UI Semibold", 15.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Simpan.Font = New Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Btn_Simpan.ForeColor = Color.White
-        Btn_Simpan.Location = New Point(346, 303)
+        Btn_Simpan.Location = New Point(12, 357)
         Btn_Simpan.Name = "Btn_Simpan"
-        Btn_Simpan.Size = New Size(140, 62)
+        Btn_Simpan.Size = New Size(325, 62)
         Btn_Simpan.TabIndex = 7
         Btn_Simpan.Text = "SIMPAN"
         Btn_Simpan.UseVisualStyleBackColor = False
         ' 
         ' Btn_Kembali
         ' 
-        Btn_Kembali.Font = New Font("Segoe UI", 10.0F)
-        Btn_Kembali.Location = New Point(11, 389)
+        Btn_Kembali.Font = New Font("Segoe UI", 10F)
+        Btn_Kembali.Location = New Point(626, 32)
         Btn_Kembali.Name = "Btn_Kembali"
         Btn_Kembali.Size = New Size(89, 30)
         Btn_Kembali.TabIndex = 8
@@ -194,13 +186,13 @@ Partial Class FormBuatPesanan
         Label7.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
         Label7.Location = New Point(12, 327)
         Label7.Name = "Label7"
-        Label7.Size = New Size(88, 20)
+        Label7.Size = New Size(92, 20)
         Label7.TabIndex = 15
-        Label7.Text = "Total Harga"
+        Label7.Text = "Total Harga:"
         ' 
         ' Txt_NmPelanggan
         ' 
-        Txt_NmPelanggan.Font = New Font("Segoe UI", 10.0F)
+        Txt_NmPelanggan.Font = New Font("Segoe UI", 10F)
         Txt_NmPelanggan.Location = New Point(12, 63)
         Txt_NmPelanggan.Name = "Txt_NmPelanggan"
         Txt_NmPelanggan.Size = New Size(325, 25)
@@ -209,7 +201,7 @@ Partial Class FormBuatPesanan
         ' MenuStrip1
         ' 
         MenuStrip1.BackColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        MenuStrip1.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold)
+        MenuStrip1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         MenuStrip1.Items.AddRange(New ToolStripItem() {MenuAkun, PELANGGAN, DAFTARPESANAN})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
@@ -275,19 +267,31 @@ Partial Class FormBuatPesanan
         DAFTARPESANAN.Size = New Size(162, 25)
         DAFTARPESANAN.Text = "DAFTAR PESANAN"
         ' 
-        ' Txt_Berat
+        ' Nmr_Berat
         ' 
-        Txt_Berat.Location = New Point(119, 180)
-        Txt_Berat.Name = "Txt_Berat"
-        Txt_Berat.Size = New Size(59, 23)
-        Txt_Berat.TabIndex = 18
+        Nmr_Berat.Location = New Point(119, 180)
+        Nmr_Berat.Name = "Nmr_Berat"
+        Nmr_Berat.Size = New Size(59, 23)
+        Nmr_Berat.TabIndex = 18
+        ' 
+        ' Lbl_Total
+        ' 
+        Lbl_Total.AutoSize = True
+        Lbl_Total.Font = New Font("Segoe UI", 11F)
+        Lbl_Total.Location = New Point(119, 327)
+        Lbl_Total.Name = "Lbl_Total"
+        Lbl_Total.Size = New Size(17, 20)
+        Lbl_Total.TabIndex = 19
+        Lbl_Total.Text = "0"
+        Lbl_Total.Visible = False
         ' 
         ' FormBuatPesanan
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(727, 431)
-        Controls.Add(Txt_Berat)
+        Controls.Add(Lbl_Total)
+        Controls.Add(Nmr_Berat)
         Controls.Add(MenuStrip1)
         Controls.Add(Txt_NmPelanggan)
         Controls.Add(Label7)
@@ -300,7 +304,6 @@ Partial Class FormBuatPesanan
         Controls.Add(Btn_Kembali)
         Controls.Add(Btn_Simpan)
         Controls.Add(Btn_Hitung)
-        Controls.Add(Txt_Total)
         Controls.Add(Combo_Layanan)
         Controls.Add(Combo_Tipe)
         Controls.Add(Txt_NoHp)
@@ -308,14 +311,13 @@ Partial Class FormBuatPesanan
         Text = "Form1"
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()
-        CType(Txt_Berat, ComponentModel.ISupportInitialize).EndInit()
+        CType(Nmr_Berat, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
     Friend WithEvents Txt_NoHp As TextBox
     Friend WithEvents Combo_Tipe As ComboBox
     Friend WithEvents Combo_Layanan As ComboBox
-    Friend WithEvents Txt_Total As TextBox
     Friend WithEvents Btn_Hitung As Button
     Friend WithEvents Btn_Simpan As Button
     Friend WithEvents Btn_Kembali As Button
@@ -335,6 +337,7 @@ Partial Class FormBuatPesanan
     Friend WithEvents EditPelanggan As ToolStripMenuItem
     Friend WithEvents HapusPelanggan As ToolStripMenuItem
     Friend WithEvents DAFTARPESANAN As ToolStripMenuItem
-    Friend WithEvents Txt_Berat As NumericUpDown
+    Friend WithEvents Nmr_Berat As NumericUpDown
+    Friend WithEvents Lbl_Total As Label
 
 End Class
