@@ -116,6 +116,7 @@ Partial Class formlogin
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
         ClientSize = New Size(640, 360)
         Controls.Add(TextBox2)
         Controls.Add(Label4)
@@ -125,7 +126,7 @@ Partial Class formlogin
         Controls.Add(Label1)
         Controls.Add(Cbktsndi)
         Controls.Add(btnmsk)
-        ForeColor = Color.Purple
+        ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
         Margin = New Padding(2)
         Name = "formlogin"
         StartPosition = FormStartPosition.CenterScreen
