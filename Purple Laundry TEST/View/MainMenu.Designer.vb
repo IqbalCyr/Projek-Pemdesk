@@ -35,16 +35,6 @@ Partial Class MainMenu
         PictureBox1 = New PictureBox()
         Pesanan = New Label()
         ListView1 = New ListView()
-        ColumnHeader1 = New ColumnHeader()
-        ColumnHeader2 = New ColumnHeader()
-        ColumnHeader3 = New ColumnHeader()
-        ColumnHeader4 = New ColumnHeader()
-        ColumnHeader5 = New ColumnHeader()
-        ColumnHeader6 = New ColumnHeader()
-        ColumnHeader7 = New ColumnHeader()
-        ColumnHeader8 = New ColumnHeader()
-        ColumnHeader9 = New ColumnHeader()
-        ColumnHeader10 = New ColumnHeader()
         Label1 = New Label()
         Label2 = New Label()
         StatusStrip1 = New StatusStrip()
@@ -86,7 +76,7 @@ Partial Class MainMenu
         LogOut.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
         LogOut.Image = CType(resources.GetObject("LogOut.Image"), Image)
         LogOut.Name = "LogOut"
-        LogOut.Size = New Size(224, 32)
+        LogOut.Size = New Size(167, 32)
         LogOut.Text = "LogOut"
         ' 
         ' PELANGGAN
@@ -166,53 +156,12 @@ Partial Class MainMenu
         ' 
         ' ListView1
         ' 
-        ListView1.Columns.AddRange(New ColumnHeader() {ColumnHeader1, ColumnHeader2, ColumnHeader3, ColumnHeader4, ColumnHeader5, ColumnHeader6, ColumnHeader7, ColumnHeader8, ColumnHeader9, ColumnHeader10})
         ListView1.Location = New Point(12, 100)
         ListView1.Name = "ListView1"
-        ListView1.Size = New Size(776, 129)
+        ListView1.Size = New Size(776, 215)
         ListView1.TabIndex = 4
         ListView1.UseCompatibleStateImageBehavior = False
         ListView1.View = View.Details
-        ' 
-        ' ColumnHeader1
-        ' 
-        ColumnHeader1.Text = "Id Pesanan"
-        ' 
-        ' ColumnHeader2
-        ' 
-        ColumnHeader2.Text = "pelanggan"
-        ' 
-        ' ColumnHeader3
-        ' 
-        ColumnHeader3.Text = "berat"
-        ' 
-        ' ColumnHeader4
-        ' 
-        ColumnHeader4.Text = "tipe cucian"
-        ' 
-        ' ColumnHeader5
-        ' 
-        ColumnHeader5.Text = "layanan"
-        ' 
-        ' ColumnHeader6
-        ' 
-        ColumnHeader6.Text = "total harga"
-        ' 
-        ' ColumnHeader7
-        ' 
-        ColumnHeader7.Text = "harga Masuk"
-        ' 
-        ' ColumnHeader8
-        ' 
-        ColumnHeader8.Text = "Tanggal Selesai"
-        ' 
-        ' ColumnHeader9
-        ' 
-        ColumnHeader9.Text = "Status"
-        ' 
-        ' ColumnHeader10
-        ' 
-        ColumnHeader10.Text = "Kasir"
         ' 
         ' Label1
         ' 
@@ -244,7 +193,7 @@ Partial Class MainMenu
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(582, 56)
+        Label3.Location = New Point(582, 62)
         Label3.Name = "Label3"
         Label3.Size = New Size(49, 20)
         Label3.TabIndex = 5
@@ -252,7 +201,7 @@ Partial Class MainMenu
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(314, 51)
+        TextBox1.Location = New Point(314, 60)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(125, 27)
         TextBox1.TabIndex = 7
@@ -267,14 +216,14 @@ Partial Class MainMenu
         ' ComboBox1
         ' 
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(637, 55)
+        ComboBox1.Location = New Point(637, 58)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(151, 28)
         ComboBox1.TabIndex = 8
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(467, 53)
+        Button1.Location = New Point(460, 58)
         Button1.Name = "Button1"
         Button1.Size = New Size(94, 29)
         Button1.TabIndex = 9
@@ -322,16 +271,6 @@ Partial Class MainMenu
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Pesanan As Label
     Friend WithEvents ListView1 As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
-    Friend WithEvents ColumnHeader5 As ColumnHeader
-    Friend WithEvents ColumnHeader6 As ColumnHeader
-    Friend WithEvents ColumnHeader7 As ColumnHeader
-    Friend WithEvents ColumnHeader8 As ColumnHeader
-    Friend WithEvents ColumnHeader9 As ColumnHeader
-    Friend WithEvents ColumnHeader10 As ColumnHeader
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents StatusStrip1 As StatusStrip
