@@ -126,7 +126,7 @@ Partial Class formlogin
         Controls.Add(Label1)
         Controls.Add(Cbktsndi)
         Controls.Add(btnmsk)
-        ForeColor = Color.Purple
+        ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
         Margin = New Padding(2)
         Name = "formlogin"
         StartPosition = FormStartPosition.CenterScreen
