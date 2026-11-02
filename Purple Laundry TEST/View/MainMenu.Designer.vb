@@ -34,6 +34,25 @@ Partial Class MainMenu
         Judul = New Label()
         PictureBox1 = New PictureBox()
         Pesanan = New Label()
+        ListView1 = New ListView()
+        ColumnHeader1 = New ColumnHeader()
+        ColumnHeader2 = New ColumnHeader()
+        ColumnHeader3 = New ColumnHeader()
+        ColumnHeader4 = New ColumnHeader()
+        ColumnHeader5 = New ColumnHeader()
+        ColumnHeader6 = New ColumnHeader()
+        ColumnHeader7 = New ColumnHeader()
+        ColumnHeader8 = New ColumnHeader()
+        ColumnHeader9 = New ColumnHeader()
+        ColumnHeader10 = New ColumnHeader()
+        Label1 = New Label()
+        Label2 = New Label()
+        StatusStrip1 = New StatusStrip()
+        Label3 = New Label()
+        TextBox1 = New TextBox()
+        TextBox2 = New TextBox()
+        ComboBox1 = New ComboBox()
+        Button1 = New Button()
         MenuStrip1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -42,10 +61,12 @@ Partial Class MainMenu
         ' 
         MenuStrip1.BackColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
         MenuStrip1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        MenuStrip1.ImageScalingSize = New Size(20, 20)
         MenuStrip1.Items.AddRange(New ToolStripItem() {MenuAkun, PELANGGAN, DAFTARPESANAN})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(700, 29)
+        MenuStrip1.Padding = New Padding(7, 3, 0, 3)
+        MenuStrip1.Size = New Size(800, 38)
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -55,7 +76,7 @@ Partial Class MainMenu
         MenuAkun.ForeColor = Color.White
         MenuAkun.Image = CType(resources.GetObject("MenuAkun.Image"), Image)
         MenuAkun.Name = "MenuAkun"
-        MenuAkun.Size = New Size(84, 25)
+        MenuAkun.Size = New Size(103, 32)
         MenuAkun.Text = "AKUN"
         MenuAkun.TextAlign = ContentAlignment.MiddleLeft
         ' 
@@ -65,7 +86,7 @@ Partial Class MainMenu
         LogOut.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
         LogOut.Image = CType(resources.GetObject("LogOut.Image"), Image)
         LogOut.Name = "LogOut"
-        LogOut.Size = New Size(136, 26)
+        LogOut.Size = New Size(224, 32)
         LogOut.Text = "LogOut"
         ' 
         ' PELANGGAN
@@ -73,7 +94,7 @@ Partial Class MainMenu
         PELANGGAN.DropDownItems.AddRange(New ToolStripItem() {TambahPelanggan, EditPelanggan, HapusPelanggan})
         PELANGGAN.ForeColor = Color.White
         PELANGGAN.Name = "PELANGGAN"
-        PELANGGAN.Size = New Size(138, 25)
+        PELANGGAN.Size = New Size(171, 32)
         PELANGGAN.Text = "PELANGGAN ▾"
         ' 
         ' TambahPelanggan
@@ -81,7 +102,7 @@ Partial Class MainMenu
         TambahPelanggan.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
         TambahPelanggan.Image = CType(resources.GetObject("TambahPelanggan.Image"), Image)
         TambahPelanggan.Name = "TambahPelanggan"
-        TambahPelanggan.Size = New Size(227, 26)
+        TambahPelanggan.Size = New Size(276, 32)
         TambahPelanggan.Text = "Tambah Pelanggan"
         ' 
         ' EditPelanggan
@@ -89,7 +110,7 @@ Partial Class MainMenu
         EditPelanggan.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
         EditPelanggan.Image = CType(resources.GetObject("EditPelanggan.Image"), Image)
         EditPelanggan.Name = "EditPelanggan"
-        EditPelanggan.Size = New Size(227, 26)
+        EditPelanggan.Size = New Size(276, 32)
         EditPelanggan.Text = "Edit Pelanggan"
         ' 
         ' HapusPelanggan
@@ -97,23 +118,23 @@ Partial Class MainMenu
         HapusPelanggan.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
         HapusPelanggan.Image = CType(resources.GetObject("HapusPelanggan.Image"), Image)
         HapusPelanggan.Name = "HapusPelanggan"
-        HapusPelanggan.Size = New Size(227, 26)
+        HapusPelanggan.Size = New Size(276, 32)
         HapusPelanggan.Text = "Hapus Pelanggan"
         ' 
         ' DAFTARPESANAN
         ' 
         DAFTARPESANAN.ForeColor = Color.White
         DAFTARPESANAN.Name = "DAFTARPESANAN"
-        DAFTARPESANAN.Size = New Size(162, 25)
+        DAFTARPESANAN.Size = New Size(203, 32)
         DAFTARPESANAN.Text = "DAFTAR PESANAN"
         ' 
         ' Judul
         ' 
         Judul.Font = New Font("Georgia", 30F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Judul.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Judul.Location = New Point(0, 168)
+        Judul.Location = New Point(0, 250)
         Judul.Name = "Judul"
-        Judul.Size = New Size(700, 46)
+        Judul.Size = New Size(800, 61)
         Judul.TabIndex = 1
         Judul.Text = "PURPLE LAUNDRY"
         Judul.TextAlign = ContentAlignment.MiddleCenter
@@ -122,9 +143,10 @@ Partial Class MainMenu
         ' 
         PictureBox1.Cursor = Cursors.Hand
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(248, 211)
+        PictureBox1.Location = New Point(280, 322)
+        PictureBox1.Margin = New Padding(3, 4, 3, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(40, 40)
+        PictureBox1.Size = New Size(46, 53)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 2
         PictureBox1.TabStop = False
@@ -135,25 +157,150 @@ Partial Class MainMenu
         Pesanan.Cursor = Cursors.Hand
         Pesanan.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
         Pesanan.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Pesanan.Location = New Point(294, 211)
+        Pesanan.Location = New Point(333, 328)
         Pesanan.Name = "Pesanan"
-        Pesanan.Size = New Size(122, 37)
+        Pesanan.Size = New Size(151, 46)
         Pesanan.TabIndex = 3
         Pesanan.Text = "Pesanan"
         Pesanan.TextAlign = ContentAlignment.MiddleLeft
         ' 
+        ' ListView1
+        ' 
+        ListView1.Columns.AddRange(New ColumnHeader() {ColumnHeader1, ColumnHeader2, ColumnHeader3, ColumnHeader4, ColumnHeader5, ColumnHeader6, ColumnHeader7, ColumnHeader8, ColumnHeader9, ColumnHeader10})
+        ListView1.Location = New Point(12, 100)
+        ListView1.Name = "ListView1"
+        ListView1.Size = New Size(776, 129)
+        ListView1.TabIndex = 4
+        ListView1.UseCompatibleStateImageBehavior = False
+        ListView1.View = View.Details
+        ' 
+        ' ColumnHeader1
+        ' 
+        ColumnHeader1.Text = "Id Pesanan"
+        ' 
+        ' ColumnHeader2
+        ' 
+        ColumnHeader2.Text = "pelanggan"
+        ' 
+        ' ColumnHeader3
+        ' 
+        ColumnHeader3.Text = "berat"
+        ' 
+        ' ColumnHeader4
+        ' 
+        ColumnHeader4.Text = "tipe cucian"
+        ' 
+        ' ColumnHeader5
+        ' 
+        ColumnHeader5.Text = "layanan"
+        ' 
+        ' ColumnHeader6
+        ' 
+        ColumnHeader6.Text = "total harga"
+        ' 
+        ' ColumnHeader7
+        ' 
+        ColumnHeader7.Text = "harga Masuk"
+        ' 
+        ' ColumnHeader8
+        ' 
+        ColumnHeader8.Text = "Tanggal Selesai"
+        ' 
+        ' ColumnHeader9
+        ' 
+        ColumnHeader9.Text = "Status"
+        ' 
+        ' ColumnHeader10
+        ' 
+        ColumnHeader10.Text = "Kasir"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(12, 62)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(79, 20)
+        Label1.TabIndex = 5
+        Label1.Text = "Id Pesanan"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(259, 63)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(49, 20)
+        Label2.TabIndex = 5
+        Label2.Text = "Nama"
+        ' 
+        ' StatusStrip1
+        ' 
+        StatusStrip1.ImageScalingSize = New Size(20, 20)
+        StatusStrip1.Location = New Point(0, 429)
+        StatusStrip1.Name = "StatusStrip1"
+        StatusStrip1.Size = New Size(800, 22)
+        StatusStrip1.TabIndex = 6
+        StatusStrip1.Text = "StatusStrip1"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(582, 56)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(49, 20)
+        Label3.TabIndex = 5
+        Label3.Text = "Status"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(314, 51)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(125, 27)
+        TextBox1.TabIndex = 7
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Location = New Point(97, 56)
+        TextBox2.Name = "TextBox2"
+        TextBox2.Size = New Size(125, 27)
+        TextBox2.TabIndex = 7
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(637, 55)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(151, 28)
+        ComboBox1.TabIndex = 8
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(467, 53)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(94, 29)
+        Button1.TabIndex = 9
+        Button1.Text = "Cari"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' MainMenu
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(700, 338)
+        ClientSize = New Size(800, 451)
+        Controls.Add(Button1)
+        Controls.Add(ComboBox1)
+        Controls.Add(TextBox2)
+        Controls.Add(TextBox1)
+        Controls.Add(StatusStrip1)
+        Controls.Add(Label3)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
+        Controls.Add(ListView1)
         Controls.Add(Pesanan)
         Controls.Add(PictureBox1)
         Controls.Add(Judul)
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
-        Margin = New Padding(3, 2, 3, 2)
         Name = "MainMenu"
         Text = "menu"
         MenuStrip1.ResumeLayout(False)
@@ -174,4 +321,23 @@ Partial Class MainMenu
     Friend WithEvents Judul As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Pesanan As Label
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents ColumnHeader10 As ColumnHeader
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button1 As Button
 End Class
