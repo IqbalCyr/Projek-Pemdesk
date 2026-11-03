@@ -11,11 +11,13 @@ Public Class FormBuatPesanan
         da = New MySqlDataAdapter("SELECT * FROM pelanggan", conn)
         da.Fill(ds, "tabelPelanggan")
         Dim coll As New AutoCompleteStringCollection()
-        For Each row As DataRow In ds.Tables("tabelPelanggan").Rows
-            coll.Add(row("nama").ToString())
+        'For Each row As DataRow In ds.Tables("tabelPelanggan").Rows
+        'coll.Add(row("nama").ToString())
+        For i As Integer = 0 To (ds.Tables("tabelPelanggan").Rows.Count - 1)
+            coll.Add(ds.Tables("tabelPelanggan").Rows(i)("nama"))
         Next
 
-        Txt_NmPelanggan.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+        Txt_NmPelanggan.AutoCompleteMode = AutoCompleteMode.Suggest
         Txt_NmPelanggan.AutoCompleteSource = AutoCompleteSource.CustomSource
         Txt_NmPelanggan.AutoCompleteCustomSource = coll
     End Sub
@@ -33,6 +35,7 @@ Public Class FormBuatPesanan
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'MenuAkun.Text = KasirAktif.Nama
         LoadAutoCompletePelanggan()
 
     End Sub
@@ -55,7 +58,7 @@ Public Class FormBuatPesanan
     End Sub
 
     Private Sub Txt_Berat_ValueChanged(sender As Object, e As EventArgs) Handles Nmr_Berat.ValueChanged
-        ' Anda bisa menambahkan logika otomatis hitung di sini jika diinginkan saat nilai berat diganti
+
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Combo_Tipe.SelectedIndexChanged
@@ -89,8 +92,6 @@ Public Class FormBuatPesanan
         End If
 
         Dim totalHarga As Integer = 0
-
-        ' Rumus Total Harga sesuai ketentuan
         If Nmr_Berat.Value <= 5 Then
             totalHarga = hargaTipe + biayaLayanan
         Else
@@ -123,7 +124,7 @@ Public Class FormBuatPesanan
             ' Perintah INSERT menggunakan Nmr_Berat.Value
             Dim query As String = "INSERT INTO pesanan (id_pelanggan, id_kasir, berat, tipe_cucian, layanan, total_harga, tanggal_masuk, tanggal_selesai, Status) VALUES (" &
                                   idPelangganSelected & ", " &
-                                  KasirAktif.Id_Kasir & ", " &
+                                  "1" & ", " & 'KasirAktif.Id_Kasir & ", " &
                                   Nmr_Berat.Value & ", '" &
                                   Combo_Tipe.SelectedItem.ToString() & "', '" &
                                   Combo_Layanan.SelectedItem.ToString() & "', " &
@@ -178,6 +179,9 @@ Public Class FormBuatPesanan
     End Sub
 
     Private Sub TambahPelanggan_Click(sender As Object, e As EventArgs) Handles TambahPelanggan.Click
+        Dim tambahPelangganForm As New TambahPelanggan()
+        tambahPelangganForm.Show()
+        Me.Hide()
     End Sub
 
     Private Sub EditPelanggan_Click(sender As Object, e As EventArgs) Handles EditPelanggan.Click

@@ -4,6 +4,7 @@ Public Class TambahPelanggan
     Private ReadOnly connStr As String =
     "Server=127.0.0.1;Port=3306;Database=laundry;Uid=root;Pwd=;"
     Private Sub TambahPelanggan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MenuAkun.Text = KasirAktif.Nama
         txtNama.MaxLength = 100
         txtNohp.MaxLength = 15
     End Sub
@@ -59,5 +60,16 @@ Public Class TambahPelanggan
         End Try
     End Sub
 
+    Private Sub DAFTARPESANAN_Click(sender As Object, e As EventArgs) Handles DAFTARPESANAN.Click
 
+    End Sub
+
+    Private Sub Btn_Kembali_Click(sender As Object, e As EventArgs) Handles Btn_Kembali.Click
+        Me.Hide()
+        MainMenu.Show()
+    End Sub
+
+    Private Sub LogOut_Click(sender As Object, e As EventArgs) Handles LogOut.Click
+
+    End Sub
 End Class
