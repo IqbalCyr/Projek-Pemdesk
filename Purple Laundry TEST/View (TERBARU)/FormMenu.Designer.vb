@@ -155,6 +155,7 @@ Partial Class FormMenu
         ' Panel3
         ' 
         Panel3.BackColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
+        Panel3.BorderStyle = BorderStyle.FixedSingle
         Panel3.Controls.Add(Button5)
         Panel3.Dock = DockStyle.Top
         Panel3.ForeColor = SystemColors.ControlLightLight
@@ -170,9 +171,10 @@ Partial Class FormMenu
         Button5.FlatStyle = FlatStyle.Flat
         Button5.Font = New Font("Calibri", 12F, FontStyle.Bold)
         Button5.Image = CType(resources.GetObject("Button5.Image"), Image)
-        Button5.Location = New Point(977, 0)
+        Button5.Location = New Point(975, 0)
         Button5.Name = "Button5"
-        Button5.Size = New Size(114, 41)
+        Button5.Padding = New Padding(5, 0, 0, 0)
+        Button5.Size = New Size(114, 39)
         Button5.TabIndex = 0
         Button5.Text = "AKUN"
         Button5.TextAlign = ContentAlignment.MiddleLeft
@@ -211,6 +213,7 @@ Partial Class FormMenu
         Name = "FormMenu"
         StartPosition = FormStartPosition.CenterScreen
         Text = "FormMenu"
+        WindowState = FormWindowState.Maximized
         Panel1.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
