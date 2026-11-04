@@ -92,4 +92,20 @@
         TampilkanDataKeListView(dv.ToTable())
     End Sub
 
+    Private Sub MenuAkun_Click(sender As Object, e As EventArgs) Handles MenuAkun.Click
+
+    End Sub
+
+    Private Sub TambahPelanggan_Click(sender As Object, e As EventArgs) Handles TambahPelanggan.Click
+        Dim tambahPelangganForm As New TambahPelanggan()
+        tambahPelangganForm.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub LogOut_Click(sender As Object, e As EventArgs) Handles LogOut.Click
+        Dim loginForm As New formlogin()
+        loginForm.Show()
+        Me.Hide()
+        KasirAktif = Nothing
+    End Sub
 End Class
