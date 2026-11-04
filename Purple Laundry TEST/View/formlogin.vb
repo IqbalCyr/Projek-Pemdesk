@@ -17,7 +17,7 @@
             KasirAktif = sesiKasir
             MsgBox($"Selamat Datang kasir : {sesiKasir.Nama}")
             Me.Hide()
-            MainMenu.Show()
+            FormMenu.Show()
         End If
 
     End Sub

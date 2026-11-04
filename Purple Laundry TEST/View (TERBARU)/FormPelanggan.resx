@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Btn_Cari.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        VAAAAFQBo63EFQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAESSURBVDhPjdO/
+        K0ZhGMbxz0LpXQx+lDAoAwuDQYkoYnhLJrtJ/gpKKZMMNhaLQQbJymJRBkp6V6P8lrIdnXrU8z7vORiu
+        5VzX9b3rue8jyzI/Qg82cY5X3GEfi3GurhOVl/GADcygE0NYwjVO8wGFAKzgFoNpIPhNWEcNLYmnH48Y
+        SIupcIjtFLCFtTRcJLThC5UYcIGpNFwmXGE8BryjPQ2WCXv5m8WAG4ykwTLhDNUYsBsTf1PYxge6YsA0
+        7tGaFlJhFSd134Kxg6N0x0k5P64X9BYBKjgIhzIbg9AXBrzhCaMNgCg8j0t8hv/gOUzNAR1YCEc3VgiI
+        QM0YRneBVw2QiVLAX8JcgEw2mP9V2N7xN3WyEVOob4bPAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
