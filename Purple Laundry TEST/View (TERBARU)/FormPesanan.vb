@@ -216,5 +216,14 @@ Public Class FormPesanan
     Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
     End Sub
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        ' Mengambil induk form (FormMenu) dan memanggil fungsi pembuka FormPelanggan di Panel4
+        Dim menuUtama As FormMenu = TryCast(Me.ParentForm, FormMenu)
+        If menuUtama IsNot Nothing Then
+            menuUtama.BukaFormPelanggan()
+        End If
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
     End Sub
 End Class
