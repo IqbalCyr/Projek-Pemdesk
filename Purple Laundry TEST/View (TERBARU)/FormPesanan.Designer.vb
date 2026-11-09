@@ -304,9 +304,9 @@ Partial Class FormPesanan
         Label11.ForeColor = Color.Red
         Label11.Location = New Point(13, 150)
         Label11.Name = "Label11"
-        Label11.Size = New Size(215, 15)
+        Label11.Size = New Size(211, 15)
         Label11.TabIndex = 5
-        Label11.Text = "*Jika nama pelanggan tidak ada, kilik:"
+        Label11.Text = "*Jika nama pelanggan tidak ada, klik:"
         ' 
         ' Label8
         ' 

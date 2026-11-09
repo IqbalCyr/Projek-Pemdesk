@@ -33,13 +33,10 @@ Partial Class FormMenu
         Panel3 = New Panel()
         Button5 = New Button()
         Panel4 = New Panel()
-        PictureBox2 = New PictureBox()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
-        Panel4.SuspendLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -183,23 +180,11 @@ Partial Class FormMenu
         ' 
         ' Panel4
         ' 
-        Panel4.Controls.Add(PictureBox2)
         Panel4.Dock = DockStyle.Fill
         Panel4.Location = New Point(253, 41)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(1091, 688)
         Panel4.TabIndex = 2
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.Dock = DockStyle.Fill
-        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(0, 0)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(1091, 688)
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 0
-        PictureBox2.TabStop = False
         ' 
         ' FormMenu
         ' 
@@ -218,8 +203,6 @@ Partial Class FormMenu
         Panel2.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
-        Panel4.ResumeLayout(False)
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -233,5 +216,4 @@ Partial Class FormMenu
     Friend WithEvents Button5 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents PictureBox2 As PictureBox
 End Class
