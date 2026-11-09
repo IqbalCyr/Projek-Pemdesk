@@ -27,15 +27,15 @@ Partial Class FormDaftarPesanan
         Panel2 = New Panel()
         Panel3 = New Panel()
         Panel4 = New Panel()
-        Btn_Cari = New Button()
+        BtnCari = New Button()
         Label3 = New Label()
-        Txt_CariNama = New TextBox()
-        Btn_Ubah = New Button()
-        Combo_Status = New ComboBox()
+        txtCari = New TextBox()
+        BtnUbah = New Button()
+        cmbStatus = New ComboBox()
         Label2 = New Label()
         Label1 = New Label()
-        Txt_IdTransaksi = New TextBox()
-        ListView1 = New ListView()
+        txtIDTransaksi = New TextBox()
+        lvPesanan = New ListView()
         Kolom_Id = New ColumnHeader()
         Kolom_Pelanggan = New ColumnHeader()
         Kolom_Kasir = New ColumnHeader()
@@ -53,105 +53,113 @@ Partial Class FormDaftarPesanan
         ' 
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(20, 649)
+        Panel1.Size = New Size(23, 865)
         Panel1.TabIndex = 0
         ' 
         ' Panel2
         ' 
         Panel2.Dock = DockStyle.Top
-        Panel2.Location = New Point(20, 0)
+        Panel2.Location = New Point(23, 0)
+        Panel2.Margin = New Padding(3, 4, 3, 4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1055, 21)
+        Panel2.Size = New Size(1206, 28)
         Panel2.TabIndex = 1
         ' 
         ' Panel3
         ' 
         Panel3.Dock = DockStyle.Right
-        Panel3.Location = New Point(1056, 21)
+        Panel3.Location = New Point(1207, 28)
+        Panel3.Margin = New Padding(3, 4, 3, 4)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(19, 628)
+        Panel3.Size = New Size(22, 837)
         Panel3.TabIndex = 2
         ' 
         ' Panel4
         ' 
-        Panel4.Controls.Add(Btn_Cari)
+        Panel4.Controls.Add(BtnCari)
         Panel4.Controls.Add(Label3)
-        Panel4.Controls.Add(Txt_CariNama)
-        Panel4.Controls.Add(Btn_Ubah)
-        Panel4.Controls.Add(Combo_Status)
+        Panel4.Controls.Add(txtCari)
+        Panel4.Controls.Add(BtnUbah)
+        Panel4.Controls.Add(cmbStatus)
         Panel4.Controls.Add(Label2)
         Panel4.Controls.Add(Label1)
-        Panel4.Controls.Add(Txt_IdTransaksi)
+        Panel4.Controls.Add(txtIDTransaksi)
         Panel4.Dock = DockStyle.Top
-        Panel4.Location = New Point(20, 21)
+        Panel4.Location = New Point(23, 28)
+        Panel4.Margin = New Padding(3, 4, 3, 4)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(1036, 261)
+        Panel4.Size = New Size(1184, 348)
         Panel4.TabIndex = 3
         ' 
-        ' Btn_Cari
+        ' BtnCari
         ' 
-        Btn_Cari.BackColor = Color.White
-        Btn_Cari.FlatStyle = FlatStyle.Flat
-        Btn_Cari.ForeColor = Color.Black
-        Btn_Cari.Image = CType(resources.GetObject("Btn_Cari.Image"), Image)
-        Btn_Cari.Location = New Point(311, 227)
-        Btn_Cari.Name = "Btn_Cari"
-        Btn_Cari.Size = New Size(28, 28)
-        Btn_Cari.TabIndex = 24
-        Btn_Cari.UseVisualStyleBackColor = False
+        BtnCari.BackColor = Color.White
+        BtnCari.FlatStyle = FlatStyle.Flat
+        BtnCari.ForeColor = Color.Black
+        BtnCari.Image = CType(resources.GetObject("BtnCari.Image"), Image)
+        BtnCari.Location = New Point(355, 298)
+        BtnCari.Margin = New Padding(3, 4, 3, 4)
+        BtnCari.Name = "BtnCari"
+        BtnCari.Size = New Size(32, 37)
+        BtnCari.TabIndex = 24
+        BtnCari.UseVisualStyleBackColor = False
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label3.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label3.Location = New Point(7, 231)
+        Label3.Location = New Point(8, 301)
         Label3.Name = "Label3"
-        Label3.Size = New Size(43, 24)
+        Label3.Size = New Size(54, 31)
         Label3.TabIndex = 23
         Label3.Text = "Cari"
         ' 
-        ' Txt_CariNama
+        ' txtCari
         ' 
-        Txt_CariNama.Font = New Font("Calibri", 13F, FontStyle.Bold)
-        Txt_CariNama.Location = New Point(56, 226)
-        Txt_CariNama.Name = "Txt_CariNama"
-        Txt_CariNama.Size = New Size(283, 29)
-        Txt_CariNama.TabIndex = 22
+        txtCari.Font = New Font("Calibri", 13F, FontStyle.Bold)
+        txtCari.Location = New Point(64, 301)
+        txtCari.Margin = New Padding(3, 4, 3, 4)
+        txtCari.Name = "txtCari"
+        txtCari.Size = New Size(323, 34)
+        txtCari.TabIndex = 22
         ' 
-        ' Btn_Ubah
+        ' BtnUbah
         ' 
-        Btn_Ubah.BackColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Btn_Ubah.FlatAppearance.BorderSize = 0
-        Btn_Ubah.FlatStyle = FlatStyle.Flat
-        Btn_Ubah.Font = New Font("Calibri", 12F, FontStyle.Bold)
-        Btn_Ubah.ForeColor = Color.White
-        Btn_Ubah.Location = New Point(278, 120)
-        Btn_Ubah.Name = "Btn_Ubah"
-        Btn_Ubah.Size = New Size(80, 39)
-        Btn_Ubah.TabIndex = 17
-        Btn_Ubah.Text = "UBAH"
-        Btn_Ubah.UseVisualStyleBackColor = False
+        BtnUbah.BackColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
+        BtnUbah.FlatAppearance.BorderSize = 0
+        BtnUbah.FlatStyle = FlatStyle.Flat
+        BtnUbah.Font = New Font("Calibri", 12F, FontStyle.Bold)
+        BtnUbah.ForeColor = Color.White
+        BtnUbah.Location = New Point(318, 160)
+        BtnUbah.Margin = New Padding(3, 4, 3, 4)
+        BtnUbah.Name = "BtnUbah"
+        BtnUbah.Size = New Size(91, 52)
+        BtnUbah.TabIndex = 17
+        BtnUbah.Text = "UBAH"
+        BtnUbah.UseVisualStyleBackColor = False
         ' 
-        ' Combo_Status
+        ' cmbStatus
         ' 
-        Combo_Status.Font = New Font("Calibri", 13F, FontStyle.Bold)
-        Combo_Status.FormattingEnabled = True
-        Combo_Status.Items.AddRange(New Object() {"Proses", "Selesai", "Batal"})
-        Combo_Status.Location = New Point(104, 126)
-        Combo_Status.Name = "Combo_Status"
-        Combo_Status.Size = New Size(168, 29)
-        Combo_Status.TabIndex = 8
+        cmbStatus.Font = New Font("Calibri", 13F, FontStyle.Bold)
+        cmbStatus.FormattingEnabled = True
+        cmbStatus.Items.AddRange(New Object() {"Proses", "Selesai", "Batal"})
+        cmbStatus.Location = New Point(119, 168)
+        cmbStatus.Margin = New Padding(3, 4, 3, 4)
+        cmbStatus.Name = "cmbStatus"
+        cmbStatus.Size = New Size(191, 35)
+        cmbStatus.TabIndex = 8
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label2.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label2.Location = New Point(25, 126)
+        Label2.Location = New Point(29, 168)
         Label2.Name = "Label2"
-        Label2.Size = New Size(62, 24)
+        Label2.Size = New Size(79, 31)
         Label2.TabIndex = 7
         Label2.Text = "Status"
         ' 
@@ -160,31 +168,33 @@ Partial Class FormDaftarPesanan
         Label1.AutoSize = True
         Label1.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label1.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label1.Location = New Point(25, 36)
+        Label1.Location = New Point(29, 48)
         Label1.Name = "Label1"
-        Label1.Size = New Size(111, 24)
+        Label1.Size = New Size(137, 31)
         Label1.TabIndex = 6
         Label1.Text = "ID Transaksi"
         ' 
-        ' Txt_IdTransaksi
+        ' txtIDTransaksi
         ' 
-        Txt_IdTransaksi.Font = New Font("Calibri", 13F, FontStyle.Bold)
-        Txt_IdTransaksi.Location = New Point(25, 63)
-        Txt_IdTransaksi.Name = "Txt_IdTransaksi"
-        Txt_IdTransaksi.Size = New Size(178, 29)
-        Txt_IdTransaksi.TabIndex = 4
+        txtIDTransaksi.Font = New Font("Calibri", 13F, FontStyle.Bold)
+        txtIDTransaksi.Location = New Point(29, 84)
+        txtIDTransaksi.Margin = New Padding(3, 4, 3, 4)
+        txtIDTransaksi.Name = "txtIDTransaksi"
+        txtIDTransaksi.Size = New Size(203, 34)
+        txtIDTransaksi.TabIndex = 4
         ' 
-        ' ListView1
+        ' lvPesanan
         ' 
-        ListView1.Columns.AddRange(New ColumnHeader() {Kolom_Id, Kolom_Pelanggan, Kolom_Kasir, Kolom_Berat, Kolom_total, Kolom_TglMasuk, Kolom_TglSelesai, Kolom_Layanan, Kolom_Status, Kolom_TglAmbil})
-        ListView1.Dock = DockStyle.Fill
-        ListView1.Font = New Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ListView1.Location = New Point(20, 282)
-        ListView1.Name = "ListView1"
-        ListView1.Size = New Size(1036, 367)
-        ListView1.TabIndex = 4
-        ListView1.UseCompatibleStateImageBehavior = False
-        ListView1.View = View.Details
+        lvPesanan.Columns.AddRange(New ColumnHeader() {Kolom_Id, Kolom_Pelanggan, Kolom_Kasir, Kolom_Berat, Kolom_total, Kolom_TglMasuk, Kolom_TglSelesai, Kolom_Layanan, Kolom_Status, Kolom_TglAmbil})
+        lvPesanan.Dock = DockStyle.Fill
+        lvPesanan.Font = New Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lvPesanan.Location = New Point(23, 376)
+        lvPesanan.Margin = New Padding(3, 4, 3, 4)
+        lvPesanan.Name = "lvPesanan"
+        lvPesanan.Size = New Size(1184, 489)
+        lvPesanan.TabIndex = 4
+        lvPesanan.UseCompatibleStateImageBehavior = False
+        lvPesanan.View = View.Details
         ' 
         ' Kolom_Id
         ' 
@@ -193,7 +203,7 @@ Partial Class FormDaftarPesanan
         ' 
         ' Kolom_Pelanggan
         ' 
-        Kolom_Pelanggan.Text = "Nama Pelanggan"
+        Kolom_Pelanggan.Text = "Pelanggan"
         Kolom_Pelanggan.Width = 175
         ' 
         ' Kolom_Kasir
@@ -243,15 +253,16 @@ Partial Class FormDaftarPesanan
         ' 
         ' FormDaftarPesanan
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1075, 649)
-        Controls.Add(ListView1)
+        ClientSize = New Size(1229, 865)
+        Controls.Add(lvPesanan)
         Controls.Add(Panel4)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 4, 3, 4)
         Name = "FormDaftarPesanan"
         Text = "FormDaftarPesanan"
         WindowState = FormWindowState.Maximized
@@ -264,7 +275,7 @@ Partial Class FormDaftarPesanan
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents lvPesanan As ListView
     Friend WithEvents Kolom_Id As ColumnHeader
     Friend WithEvents Kolom_Pelanggan As ColumnHeader
     Friend WithEvents Kolom_Kasir As ColumnHeader
@@ -275,12 +286,12 @@ Partial Class FormDaftarPesanan
     Friend WithEvents Kolom_Layanan As ColumnHeader
     Friend WithEvents Kolom_Status As ColumnHeader
     Friend WithEvents Kolom_TglAmbil As ColumnHeader
-    Friend WithEvents Txt_IdTransaksi As TextBox
+    Friend WithEvents txtIDTransaksi As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Combo_Status As ComboBox
-    Friend WithEvents Btn_Ubah As Button
-    Friend WithEvents Btn_Cari As Button
+    Friend WithEvents cmbStatus As ComboBox
+    Friend WithEvents BtnUbah As Button
+    Friend WithEvents BtnCari As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents Txt_CariNama As TextBox
+    Friend WithEvents txtCari As TextBox
 End Class

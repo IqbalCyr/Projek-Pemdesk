@@ -30,7 +30,7 @@ Public Class FormPesanan
 
         Combo_Tipe.Items.Clear()
         For Each row As DataRow In ds.Tables("layanan").Rows
-            Combo_Tipe.Items.Add(row("tipe_cucian").ToString())
+            Combo_Tipe.Items.Add(row("tipe_layanan").ToString())
         Next
 
         ' Pastikan Combo Layanan (Express / Reguler) juga terisi jika belum diatur di designer
