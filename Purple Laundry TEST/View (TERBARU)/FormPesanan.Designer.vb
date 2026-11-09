@@ -65,17 +65,19 @@ Partial Class FormPesanan
         ' 
         Panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink
         Panel1.Font = New Font("Calibri", 12F, FontStyle.Bold)
-        Panel1.Location = New Point(87, 12)
+        Panel1.Location = New Point(99, 16)
+        Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1091, 705)
+        Panel1.Size = New Size(1247, 940)
         Panel1.TabIndex = 0
         ' 
         ' Panel7
         ' 
         Panel7.Dock = DockStyle.Top
-        Panel7.Location = New Point(20, 0)
+        Panel7.Location = New Point(23, 0)
+        Panel7.Margin = New Padding(3, 4, 3, 4)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(1104, 21)
+        Panel7.Size = New Size(1262, 28)
         Panel7.TabIndex = 0
         ' 
         ' Panel2
@@ -89,8 +91,9 @@ Partial Class FormPesanan
         Panel2.Controls.Add(Panel9)
         Panel2.Dock = DockStyle.Left
         Panel2.Location = New Point(0, 0)
+        Panel2.Margin = New Padding(3, 4, 3, 4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1124, 729)
+        Panel2.Size = New Size(1285, 972)
         Panel2.TabIndex = 0
         ' 
         ' Panel4
@@ -111,9 +114,10 @@ Partial Class FormPesanan
         Panel4.Controls.Add(Btn_Hitung)
         Panel4.Controls.Add(Nmr_Berat)
         Panel4.Dock = DockStyle.Top
-        Panel4.Location = New Point(478, 21)
+        Panel4.Location = New Point(546, 28)
+        Panel4.Margin = New Padding(3, 4, 3, 4)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(636, 505)
+        Panel4.Size = New Size(728, 673)
         Panel4.TabIndex = 17
         ' 
         ' Label10
@@ -121,9 +125,9 @@ Partial Class FormPesanan
         Label10.AutoSize = True
         Label10.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label10.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label10.Location = New Point(324, 226)
+        Label10.Location = New Point(370, 301)
         Label10.Name = "Label10"
-        Label10.Size = New Size(134, 24)
+        Label10.Size = New Size(169, 31)
         Label10.TabIndex = 20
         Label10.Text = "Tanggal Selesai"
         ' 
@@ -132,9 +136,9 @@ Partial Class FormPesanan
         Label4.AutoSize = True
         Label4.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label4.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label4.Location = New Point(35, 226)
+        Label4.Location = New Point(40, 301)
         Label4.Name = "Label4"
-        Label4.Size = New Size(133, 24)
+        Label4.Size = New Size(166, 31)
         Label4.TabIndex = 19
         Label4.Text = "Tanggal Masuk"
         ' 
@@ -142,18 +146,20 @@ Partial Class FormPesanan
         ' 
         DT_TanggalSelesai.Enabled = False
         DT_TanggalSelesai.Font = New Font("Calibri", 11.25F)
-        DT_TanggalSelesai.Location = New Point(324, 253)
+        DT_TanggalSelesai.Location = New Point(370, 337)
+        DT_TanggalSelesai.Margin = New Padding(3, 4, 3, 4)
         DT_TanggalSelesai.Name = "DT_TanggalSelesai"
-        DT_TanggalSelesai.Size = New Size(220, 26)
+        DT_TanggalSelesai.Size = New Size(251, 30)
         DT_TanggalSelesai.TabIndex = 18
         ' 
         ' DT_TanggalMasuk
         ' 
         DT_TanggalMasuk.Enabled = False
         DT_TanggalMasuk.Font = New Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DT_TanggalMasuk.Location = New Point(35, 253)
+        DT_TanggalMasuk.Location = New Point(40, 337)
+        DT_TanggalMasuk.Margin = New Padding(3, 4, 3, 4)
         DT_TanggalMasuk.Name = "DT_TanggalMasuk"
-        DT_TanggalMasuk.Size = New Size(220, 26)
+        DT_TanggalMasuk.Size = New Size(251, 30)
         DT_TanggalMasuk.TabIndex = 17
         ' 
         ' Label9
@@ -166,7 +172,7 @@ Partial Class FormPesanan
         Label9.ForeColor = Color.White
         Label9.Location = New Point(0, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(680, 31)
+        Label9.Size = New Size(930, 39)
         Label9.TabIndex = 16
         Label9.Text = "Data Layanan                                                                                                          "
         Label9.TextAlign = ContentAlignment.MiddleLeft
@@ -175,9 +181,9 @@ Partial Class FormPesanan
         ' 
         Lbl_TotalHarga.AutoSize = True
         Lbl_TotalHarga.Font = New Font("Calibri", 40F, FontStyle.Bold)
-        Lbl_TotalHarga.Location = New Point(38, 414)
+        Lbl_TotalHarga.Location = New Point(43, 552)
         Lbl_TotalHarga.Name = "Lbl_TotalHarga"
-        Lbl_TotalHarga.Size = New Size(174, 66)
+        Lbl_TotalHarga.Size = New Size(216, 82)
         Lbl_TotalHarga.TabIndex = 13
         Lbl_TotalHarga.Text = "Label8"
         Lbl_TotalHarga.Visible = False
@@ -186,9 +192,10 @@ Partial Class FormPesanan
         ' 
         Combo_Tipe.Font = New Font("Calibri", 13F, FontStyle.Bold)
         Combo_Tipe.FormattingEnabled = True
-        Combo_Tipe.Location = New Point(35, 76)
+        Combo_Tipe.Location = New Point(40, 101)
+        Combo_Tipe.Margin = New Padding(3, 4, 3, 4)
         Combo_Tipe.Name = "Combo_Tipe"
-        Combo_Tipe.Size = New Size(151, 29)
+        Combo_Tipe.Size = New Size(172, 35)
         Combo_Tipe.TabIndex = 8
         ' 
         ' Label5
@@ -196,9 +203,9 @@ Partial Class FormPesanan
         Label5.AutoSize = True
         Label5.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label5.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label5.Location = New Point(35, 54)
+        Label5.Location = New Point(40, 72)
         Label5.Name = "Label5"
-        Label5.Size = New Size(107, 24)
+        Label5.Size = New Size(131, 31)
         Label5.TabIndex = 7
         Label5.Text = "Tipe Cucian"
         ' 
@@ -207,9 +214,9 @@ Partial Class FormPesanan
         Label7.AutoSize = True
         Label7.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label7.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label7.Location = New Point(31, 379)
+        Label7.Location = New Point(35, 505)
         Label7.Name = "Label7"
-        Label7.Size = New Size(111, 24)
+        Label7.Size = New Size(138, 31)
         Label7.TabIndex = 12
         Label7.Text = "Total Harga:"
         ' 
@@ -218,9 +225,10 @@ Partial Class FormPesanan
         Combo_Layanan.Font = New Font("Calibri", 13F, FontStyle.Bold)
         Combo_Layanan.FormattingEnabled = True
         Combo_Layanan.Items.AddRange(New Object() {"Express", "Reguler"})
-        Combo_Layanan.Location = New Point(324, 76)
+        Combo_Layanan.Location = New Point(370, 101)
+        Combo_Layanan.Margin = New Padding(3, 4, 3, 4)
         Combo_Layanan.Name = "Combo_Layanan"
-        Combo_Layanan.Size = New Size(121, 29)
+        Combo_Layanan.Size = New Size(138, 35)
         Combo_Layanan.TabIndex = 10
         ' 
         ' Label6
@@ -228,9 +236,9 @@ Partial Class FormPesanan
         Label6.AutoSize = True
         Label6.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label6.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label6.Location = New Point(324, 54)
+        Label6.Location = New Point(370, 72)
         Label6.Name = "Label6"
-        Label6.Size = New Size(79, 24)
+        Label6.Size = New Size(99, 31)
         Label6.TabIndex = 9
         Label6.Text = "Layanan"
         ' 
@@ -239,17 +247,18 @@ Partial Class FormPesanan
         Label3.AutoSize = True
         Label3.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label3.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label3.Location = New Point(35, 141)
+        Label3.Location = New Point(40, 188)
         Label3.Name = "Label3"
-        Label3.Size = New Size(153, 24)
+        Label3.Size = New Size(191, 31)
         Label3.TabIndex = 4
         Label3.Text = "Berat Cucian (Kg)"
         ' 
         ' Btn_Hitung
         ' 
-        Btn_Hitung.Location = New Point(31, 311)
+        Btn_Hitung.Location = New Point(35, 415)
+        Btn_Hitung.Margin = New Padding(3, 4, 3, 4)
         Btn_Hitung.Name = "Btn_Hitung"
-        Btn_Hitung.Size = New Size(180, 39)
+        Btn_Hitung.Size = New Size(206, 52)
         Btn_Hitung.TabIndex = 11
         Btn_Hitung.Text = "HITUNG"
         Btn_Hitung.UseVisualStyleBackColor = True
@@ -257,17 +266,19 @@ Partial Class FormPesanan
         ' Nmr_Berat
         ' 
         Nmr_Berat.Font = New Font("Calibri", 13F)
-        Nmr_Berat.Location = New Point(35, 168)
+        Nmr_Berat.Location = New Point(40, 224)
+        Nmr_Berat.Margin = New Padding(3, 4, 3, 4)
         Nmr_Berat.Name = "Nmr_Berat"
-        Nmr_Berat.Size = New Size(151, 29)
+        Nmr_Berat.Size = New Size(173, 34)
         Nmr_Berat.TabIndex = 5
         ' 
         ' Panel5
         ' 
         Panel5.Dock = DockStyle.Left
-        Panel5.Location = New Point(405, 21)
+        Panel5.Location = New Point(463, 28)
+        Panel5.Margin = New Padding(3, 4, 3, 4)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(73, 505)
+        Panel5.Size = New Size(83, 673)
         Panel5.TabIndex = 18
         ' 
         ' Panel3
@@ -281,18 +292,19 @@ Partial Class FormPesanan
         Panel3.Controls.Add(Txt_HpPealnggan)
         Panel3.Controls.Add(Label2)
         Panel3.Dock = DockStyle.Left
-        Panel3.Location = New Point(20, 21)
+        Panel3.Location = New Point(23, 28)
+        Panel3.Margin = New Padding(3, 4, 3, 4)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(385, 505)
+        Panel3.Size = New Size(440, 673)
         Panel3.TabIndex = 16
         ' 
         ' LinkLabel1
         ' 
         LinkLabel1.AutoSize = True
         LinkLabel1.Font = New Font("Calibri", 9.75F)
-        LinkLabel1.Location = New Point(225, 150)
+        LinkLabel1.Location = New Point(257, 200)
         LinkLabel1.Name = "LinkLabel1"
-        LinkLabel1.Size = New Size(110, 15)
+        LinkLabel1.Size = New Size(140, 21)
         LinkLabel1.TabIndex = 6
         LinkLabel1.TabStop = True
         LinkLabel1.Text = "Tambah pelanggan"
@@ -302,9 +314,9 @@ Partial Class FormPesanan
         Label11.AutoSize = True
         Label11.Font = New Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.Red
-        Label11.Location = New Point(13, 150)
+        Label11.Location = New Point(15, 200)
         Label11.Name = "Label11"
-        Label11.Size = New Size(211, 15)
+        Label11.Size = New Size(265, 21)
         Label11.TabIndex = 5
         Label11.Text = "*Jika nama pelanggan tidak ada, klik:"
         ' 
@@ -318,7 +330,7 @@ Partial Class FormPesanan
         Label8.ForeColor = Color.White
         Label8.Location = New Point(0, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(390, 31)
+        Label8.Size = New Size(520, 39)
         Label8.TabIndex = 4
         Label8.Text = "Data Pelanggan                                            "
         Label8.TextAlign = ContentAlignment.MiddleLeft
@@ -326,9 +338,10 @@ Partial Class FormPesanan
         ' Txt_NmPelanggan
         ' 
         Txt_NmPelanggan.Font = New Font("Calibri", 13F, FontStyle.Bold)
-        Txt_NmPelanggan.Location = New Point(12, 81)
+        Txt_NmPelanggan.Location = New Point(14, 108)
+        Txt_NmPelanggan.Margin = New Padding(3, 4, 3, 4)
         Txt_NmPelanggan.Name = "Txt_NmPelanggan"
-        Txt_NmPelanggan.Size = New Size(352, 29)
+        Txt_NmPelanggan.Size = New Size(402, 34)
         Txt_NmPelanggan.TabIndex = 1
         ' 
         ' Label1
@@ -336,18 +349,19 @@ Partial Class FormPesanan
         Label1.AutoSize = True
         Label1.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label1.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label1.Location = New Point(12, 54)
+        Label1.Location = New Point(14, 72)
         Label1.Name = "Label1"
-        Label1.Size = New Size(150, 24)
+        Label1.Size = New Size(186, 31)
         Label1.TabIndex = 0
         Label1.Text = "Nama Pelanggan"
         ' 
         ' Txt_HpPealnggan
         ' 
         Txt_HpPealnggan.Font = New Font("Calibri", 13F, FontStyle.Bold)
-        Txt_HpPealnggan.Location = New Point(13, 221)
+        Txt_HpPealnggan.Location = New Point(15, 295)
+        Txt_HpPealnggan.Margin = New Padding(3, 4, 3, 4)
         Txt_HpPealnggan.Name = "Txt_HpPealnggan"
-        Txt_HpPealnggan.Size = New Size(207, 29)
+        Txt_HpPealnggan.Size = New Size(236, 34)
         Txt_HpPealnggan.TabIndex = 3
         ' 
         ' Label2
@@ -355,18 +369,19 @@ Partial Class FormPesanan
         Label2.AutoSize = True
         Label2.Font = New Font("Calibri", 15F, FontStyle.Bold)
         Label2.ForeColor = Color.FromArgb(CByte(201), CByte(106), CByte(232))
-        Label2.Location = New Point(13, 194)
+        Label2.Location = New Point(15, 259)
         Label2.Name = "Label2"
-        Label2.Size = New Size(154, 24)
+        Label2.Size = New Size(190, 31)
         Label2.TabIndex = 2
         Label2.Text = "No HP Pelanggan"
         ' 
         ' Panel6
         ' 
         Panel6.Dock = DockStyle.Right
-        Panel6.Location = New Point(1114, 21)
+        Panel6.Location = New Point(1274, 28)
+        Panel6.Margin = New Padding(3, 4, 3, 4)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(10, 505)
+        Panel6.Size = New Size(11, 673)
         Panel6.TabIndex = 19
         ' 
         ' Panel8
@@ -374,18 +389,20 @@ Partial Class FormPesanan
         Panel8.Controls.Add(Btn_Bersih)
         Panel8.Controls.Add(Btn_Simpan)
         Panel8.Dock = DockStyle.Bottom
-        Panel8.Location = New Point(20, 526)
+        Panel8.Location = New Point(23, 701)
+        Panel8.Margin = New Padding(3, 4, 3, 4)
         Panel8.Name = "Panel8"
-        Panel8.Size = New Size(1104, 203)
+        Panel8.Size = New Size(1262, 271)
         Panel8.TabIndex = 20
         ' 
         ' Btn_Bersih
         ' 
         Btn_Bersih.FlatStyle = FlatStyle.Flat
         Btn_Bersih.Font = New Font("Calibri", 12F, FontStyle.Bold)
-        Btn_Bersih.Location = New Point(497, 6)
+        Btn_Bersih.Location = New Point(568, 8)
+        Btn_Bersih.Margin = New Padding(3, 4, 3, 4)
         Btn_Bersih.Name = "Btn_Bersih"
-        Btn_Bersih.Size = New Size(150, 39)
+        Btn_Bersih.Size = New Size(171, 52)
         Btn_Bersih.TabIndex = 14
         Btn_Bersih.Text = "BERSIH"
         Btn_Bersih.UseVisualStyleBackColor = True
@@ -397,9 +414,10 @@ Partial Class FormPesanan
         Btn_Simpan.FlatStyle = FlatStyle.Flat
         Btn_Simpan.Font = New Font("Calibri", 12F, FontStyle.Bold)
         Btn_Simpan.ForeColor = Color.White
-        Btn_Simpan.Location = New Point(931, 6)
+        Btn_Simpan.Location = New Point(1064, 8)
+        Btn_Simpan.Margin = New Padding(3, 4, 3, 4)
         Btn_Simpan.Name = "Btn_Simpan"
-        Btn_Simpan.Size = New Size(150, 39)
+        Btn_Simpan.Size = New Size(171, 52)
         Btn_Simpan.TabIndex = 15
         Btn_Simpan.Text = "SIMPAN"
         Btn_Simpan.UseVisualStyleBackColor = False
@@ -408,18 +426,20 @@ Partial Class FormPesanan
         ' 
         Panel9.Dock = DockStyle.Left
         Panel9.Location = New Point(0, 0)
+        Panel9.Margin = New Padding(3, 4, 3, 4)
         Panel9.Name = "Panel9"
-        Panel9.Size = New Size(20, 729)
+        Panel9.Size = New Size(23, 972)
         Panel9.TabIndex = 21
         ' 
         ' FormPesanan
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1344, 729)
+        ClientSize = New Size(1536, 972)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 4, 3, 4)
         Name = "FormPesanan"
         Text = "FormPesanan"
         WindowState = FormWindowState.Maximized
