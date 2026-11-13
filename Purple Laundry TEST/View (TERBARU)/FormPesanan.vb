@@ -89,25 +89,13 @@ Public Class FormPesanan
         End If
     End Sub
 
-    ' Logika Otomatis Tanggal Selesai Berdasarkan Pilihan Layanan
-    Private Sub Combo_Layanan_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Combo_Layanan.SelectedIndexChanged
-        If Combo_Layanan.SelectedItem IsNot Nothing Then
-            Dim pilihanLayanan As String = Combo_Layanan.SelectedItem.ToString()
-
-            If pilihanLayanan = "Express" Then
-                ' Express = 1 hari dari tanggal masuk
-                DT_TanggalSelesai.Value = DT_TanggalMasuk.Value.AddDays(1)
-            Else
-                ' Reguler = 3 hari dari tanggal masuk
-                DT_TanggalSelesai.Value = DT_TanggalMasuk.Value.AddDays(3)
-            End If
-        End If
-    End Sub
-
-    Private Sub Btn_Hitung_Click(sender As Object, e As EventArgs) Handles Btn_Hitung.Click
-        ' Validasi input sebelum dihitung
-        If Nmr_Berat.Value = 0 Or Combo_Tipe.SelectedIndex = -1 Or Combo_Layanan.SelectedIndex = -1 Then
-            MsgBox("Mohon isi berat cucian, tipe cucian, dan layanan terlebih dahulu!", vbExclamation, "Peringatan")
+    ' --- LOGIKA HITUNG OTOMATIS (LIVE CALCULATION) ---
+    Sub HitungOtomatis()
+        ' Jika tipe cucian atau layanan belum dipilih, jangan hitung/tampilkan total dulu
+        If Combo_Tipe.SelectedIndex = -1 Or Combo_Layanan.SelectedIndex = -1 Then
+            totalHargaVal = 0
+            Lbl_TotalHarga.Text = ""
+            Lbl_TotalHarga.Visible = False
             Return
         End If
 
@@ -133,14 +121,43 @@ Public Class FormPesanan
             totalHargaVal = hargaTipe + ((beratInt - 5) * 5000) + biayaLayanan
         End If
 
-        ' Tampilkan ke Label Total Harga dan ubah Visible menjadi True
+        ' Tampilkan otomatis ke Label Total Harga
         Lbl_TotalHarga.Text = "Rp " & totalHargaVal.ToString("#,##0")
         Lbl_TotalHarga.Visible = True
     End Sub
 
+    ' Pemicu perhitungan otomatis saat Tipe Cucian diubah
+    Private Sub Combo_Tipe_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Combo_Tipe.SelectedIndexChanged
+        HitungOtomatis()
+    End Sub
+
+    ' Pemicu perhitungan otomatis & tanggal selesai saat Layanan diubah
+    Private Sub Combo_Layanan_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Combo_Layanan.SelectedIndexChanged
+        If Combo_Layanan.SelectedItem IsNot Nothing Then
+            Dim pilihanLayanan As String = Combo_Layanan.SelectedItem.ToString()
+
+            If pilihanLayanan = "Express" Then
+                ' Express = 1 hari dari tanggal masuk
+                DT_TanggalSelesai.Value = DT_TanggalMasuk.Value.AddDays(1)
+            Else
+                ' Reguler = 3 hari dari tanggal masuk
+                DT_TanggalSelesai.Value = DT_TanggalMasuk.Value.AddDays(3)
+            End If
+        End If
+
+        HitungOtomatis()
+    End Sub
+
+    ' Pemicu perhitungan otomatis saat Berat Cucian (NumericUpDown) diubah
+    Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles Nmr_Berat.ValueChanged
+        HitungOtomatis()
+    End Sub
+    ' ------------------------------------------------
+
     Private Sub Btn_Simpan_Click(sender As Object, e As EventArgs) Handles Btn_Simpan.Click
+        ' Validasi tanpa perlu mengecek tombol hitung lagi
         If idPelangganSelected = 0 Or totalHargaVal = 0 Or Combo_Tipe.SelectedIndex = -1 Or Combo_Layanan.SelectedIndex = -1 Then
-            MsgBox("Data belum lengkap atau silakan klik tombol Hitung terlebih dahulu!", vbExclamation, "Peringatan")
+            MsgBox("Data pesanan belum lengkap atau pastikan tipe & layanan sudah dipilih!", vbExclamation, "Peringatan")
             Return
         End If
 
@@ -149,7 +166,7 @@ Public Class FormPesanan
             Return
         End If
 
-        ' Mengambil nilai tanggal langsung dari komponen DateTimePicker yang sudah diatur otomatis
+        ' Mengambil nilai tanggal langsung dari komponen DateTimePicker
         Dim tglTransaksi As String = DT_TanggalMasuk.Value.ToString("yyyy-MM-dd HH:mm:ss")
         Dim estimasiSelesai As String = DT_TanggalSelesai.Value.ToString("yyyy-MM-dd")
 
@@ -182,7 +199,7 @@ Public Class FormPesanan
         ClearForm()
     End Sub
 
-    ' Event handler kosong pendukung kontrol lainnya
+    ' Event handler pendukung kontrol lainnya
     Private Sub FormPesanan_Resize_1(sender As Object, e As EventArgs) Handles Me.Resize
     End Sub
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
@@ -195,11 +212,7 @@ Public Class FormPesanan
     End Sub
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
     End Sub
-    Private Sub NumericUpDown1_ValueChanged(sender As Object, e As EventArgs) Handles Nmr_Berat.ValueChanged
-    End Sub
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-    End Sub
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Combo_Tipe.SelectedIndexChanged
     End Sub
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
     End Sub
@@ -216,14 +229,11 @@ Public Class FormPesanan
     Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
     End Sub
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        ' Mengambil induk form (FormMenu) dan memanggil fungsi pembuka FormPelanggan di Panel4
         Dim menuUtama As FormMenu = TryCast(Me.ParentForm, FormMenu)
         If menuUtama IsNot Nothing Then
             menuUtama.BukaFormPelanggan()
         End If
     End Sub
-
     Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
-
     End Sub
 End Class
