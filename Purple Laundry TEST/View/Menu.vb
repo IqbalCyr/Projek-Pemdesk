@@ -32,6 +32,7 @@
     End Sub
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        Panel6.Controls.Clear()
         With Dashboard
             .TopLevel = False
             Panel6.Controls.Add(Dashboard)
@@ -41,6 +42,7 @@
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnCustomer.Click
+        Panel6.Controls.Clear()
         With customer
             .TopLevel = False
             Panel6.Controls.Add(customer)
@@ -78,6 +80,7 @@
     End Sub
 
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Panel6.Controls.Clear()
         With Dashboard
             .TopLevel = False
             Panel6.Controls.Add(Dashboard)
