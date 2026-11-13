@@ -142,9 +142,9 @@ Partial Class FormMenu
         ' PictureBox1
         ' 
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(26, 0)
+        PictureBox1.Location = New Point(32, 0)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(179, 97)
+        PictureBox1.Size = New Size(189, 97)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -174,8 +174,8 @@ Partial Class FormMenu
         Button5.Size = New Size(114, 39)
         Button5.TabIndex = 0
         Button5.Text = "AKUN"
-        Button5.TextAlign = ContentAlignment.MiddleLeft
-        Button5.TextImageRelation = TextImageRelation.TextBeforeImage
+        Button5.TextAlign = ContentAlignment.MiddleRight
+        Button5.TextImageRelation = TextImageRelation.ImageBeforeText
         Button5.UseVisualStyleBackColor = True
         ' 
         ' Panel4
