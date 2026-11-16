@@ -35,10 +35,10 @@ Partial Class customer
         Label15 = New Label()
         txtCari = New TextBox()
         DataGridView1 = New DataGridView()
+        ContextMenuStrip1 = New ContextMenuStrip(components)
         colomnNama = New DataGridViewTextBoxColumn()
         colomnNoHp = New DataGridViewTextBoxColumn()
         colomnAksi = New DataGridViewButtonColumn()
-        ContextMenuStrip1 = New ContextMenuStrip(components)
         Panel3.SuspendLayout()
         Panel4.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -119,7 +119,7 @@ Partial Class customer
         Btn_Cari.FlatStyle = FlatStyle.Flat
         Btn_Cari.ForeColor = Color.Black
         Btn_Cari.Image = CType(resources.GetObject("Btn_Cari.Image"), Image)
-        Btn_Cari.Location = New Point(514, 33)
+        Btn_Cari.Location = New Point(530, 34)
         Btn_Cari.Name = "Btn_Cari"
         Btn_Cari.Size = New Size(33, 32)
         Btn_Cari.TabIndex = 22
@@ -139,7 +139,7 @@ Partial Class customer
         ' txtCari
         ' 
         txtCari.Font = New Font("Calibri", 15F)
-        txtCari.Location = New Point(107, 33)
+        txtCari.Location = New Point(123, 34)
         txtCari.Name = "txtCari"
         txtCari.Size = New Size(440, 32)
         txtCari.TabIndex = 1
@@ -165,29 +165,29 @@ Partial Class customer
         DataGridView1.Size = New Size(1278, 477)
         DataGridView1.TabIndex = 0
         ' 
+        ' ContextMenuStrip1
+        ' 
+        ContextMenuStrip1.Name = "ContextMenuStrip1"
+        ContextMenuStrip1.Size = New Size(61, 4)
+        ' 
         ' colomnNama
         ' 
-        colomnNama.HeaderText = "Nama Pealnggan"
+        colomnNama.HeaderText = "Nama Pelanggan"
         colomnNama.Name = "colomnNama"
-        colomnNama.Width = 500
+        colomnNama.Width = 510
         ' 
         ' colomnNoHp
         ' 
         colomnNoHp.HeaderText = "Nomor HP"
         colomnNoHp.Name = "colomnNoHp"
-        colomnNoHp.Width = 350
+        colomnNoHp.Width = 370
         ' 
         ' colomnAksi
         ' 
         colomnAksi.HeaderText = "Aksi"
         colomnAksi.Name = "colomnAksi"
         colomnAksi.Text = "EDIT"
-        colomnAksi.Width = 384
-        ' 
-        ' ContextMenuStrip1
-        ' 
-        ContextMenuStrip1.Name = "ContextMenuStrip1"
-        ContextMenuStrip1.Size = New Size(61, 4)
+        colomnAksi.Width = 395
         ' 
         ' customer
         ' 

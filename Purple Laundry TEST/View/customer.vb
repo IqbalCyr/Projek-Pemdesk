@@ -54,4 +54,5 @@
         path.CloseAllFigures()
         btnTambah.Region = New Region(path)
     End Sub
+
 End Class
