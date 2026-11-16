@@ -52,7 +52,12 @@
     End Sub
 
     Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
-
+        With Transaksi
+            .TopLevel = False
+            Panel6.Controls.Add(Transaksi)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
     Private Sub btnPengeluaran_Click(sender As Object, e As EventArgs) Handles btnPengeluaran.Click
@@ -141,4 +146,7 @@
 
     End Sub
 
+    Private Sub Btn_Stok_Click(sender As Object, e As EventArgs) Handles Btn_Stok.Click
+
+    End Sub
 End Class
