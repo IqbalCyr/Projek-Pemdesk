@@ -41,6 +41,7 @@ Partial Class Menu
         Label3 = New Label()
         PictureBox2 = New PictureBox()
         Panel6 = New Panel()
+        Btn_Stok = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -51,6 +52,7 @@ Partial Class Menu
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(13), CByte(115), CByte(119))
+        Panel1.Controls.Add(Btn_Stok)
         Panel1.Controls.Add(btnKeluar)
         Panel1.Controls.Add(btnPengeluaran)
         Panel1.Controls.Add(btnLaporan)
@@ -309,6 +311,24 @@ Partial Class Menu
         Panel6.Size = New Size(1536, 1096)
         Panel6.TabIndex = 3
         ' 
+        ' Btn_Stok
+        ' 
+        Btn_Stok.Dock = DockStyle.Top
+        Btn_Stok.FlatAppearance.BorderSize = 0
+        Btn_Stok.FlatStyle = FlatStyle.Flat
+        Btn_Stok.Font = New Font("Calibri", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Stok.ForeColor = Color.White
+        Btn_Stok.Image = CType(resources.GetObject("Btn_Stok.Image"), Image)
+        Btn_Stok.Location = New Point(24, 461)
+        Btn_Stok.Name = "Btn_Stok"
+        Btn_Stok.Padding = New Padding(20, 0, 0, 0)
+        Btn_Stok.Size = New Size(189, 65)
+        Btn_Stok.TabIndex = 7
+        Btn_Stok.Text = " Stok"
+        Btn_Stok.TextAlign = ContentAlignment.MiddleLeft
+        Btn_Stok.TextImageRelation = TextImageRelation.ImageBeforeText
+        Btn_Stok.UseVisualStyleBackColor = True
+        ' 
         ' Menu
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -351,4 +371,5 @@ Partial Class Menu
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel6 As Panel
+    Friend WithEvents Btn_Stok As Button
 End Class
