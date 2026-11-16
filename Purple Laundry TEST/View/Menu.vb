@@ -55,11 +55,17 @@
 
     End Sub
 
-    Private Sub btnPengeluaran_Click(sender As Object, e As EventArgs) Handles btnPengeluaran.Click
-
+    Private Sub btnPengeluaran_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        Panel6.Controls.Clear()
+        With Laporan
+            .TopLevel = False
+            Panel6.Controls.Add(Laporan)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
-    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnPengeluaran.Click
 
     End Sub
 

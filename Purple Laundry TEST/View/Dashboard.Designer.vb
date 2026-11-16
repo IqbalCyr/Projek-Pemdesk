@@ -84,9 +84,9 @@ Partial Class Dashboard
         Label16.AutoSize = True
         Label16.Font = New Font("Calibri", 18F)
         Label16.ForeColor = Color.Black
-        Label16.Location = New Point(213, 44)
+        Label16.Location = New Point(243, 59)
         Label16.Name = "Label16"
-        Label16.Size = New Size(70, 29)
+        Label16.Size = New Size(88, 37)
         Label16.TabIndex = 12
         Label16.Text = "AKUN"
         ' 
@@ -95,9 +95,9 @@ Partial Class Dashboard
         Label15.AutoSize = True
         Label15.Font = New Font("Calibri", 18F)
         Label15.ForeColor = Color.Black
-        Label15.Location = New Point(42, 44)
+        Label15.Location = New Point(48, 59)
         Label15.Name = "Label15"
-        Label15.Size = New Size(180, 29)
+        Label15.Size = New Size(222, 37)
         Label15.TabIndex = 11
         Label15.Text = "Selamat Datang, "
         ' 
@@ -106,9 +106,9 @@ Partial Class Dashboard
         Label14.AutoSize = True
         Label14.Font = New Font("Calibri", 20F, FontStyle.Bold)
         Label14.ForeColor = Color.Black
-        Label14.Location = New Point(42, 11)
+        Label14.Location = New Point(48, 15)
         Label14.Name = "Label14"
-        Label14.Size = New Size(136, 33)
+        Label14.Size = New Size(171, 41)
         Label14.TabIndex = 10
         Label14.Text = "Dashboard"
         ' 
@@ -119,17 +119,19 @@ Partial Class Dashboard
         pnlPelanggan.Controls.Add(Label7)
         pnlPelanggan.Controls.Add(Label6)
         pnlPelanggan.Controls.Add(Label5)
-        pnlPelanggan.Location = New Point(54, 97)
+        pnlPelanggan.Location = New Point(62, 129)
+        pnlPelanggan.Margin = New Padding(3, 4, 3, 4)
         pnlPelanggan.Name = "pnlPelanggan"
-        pnlPelanggan.Size = New Size(320, 188)
+        pnlPelanggan.Size = New Size(366, 251)
         pnlPelanggan.TabIndex = 8
         ' 
         ' PictureBox3
         ' 
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(229, 100)
+        PictureBox3.Location = New Point(262, 133)
+        PictureBox3.Margin = New Padding(3, 4, 3, 4)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(85, 85)
+        PictureBox3.Size = New Size(97, 113)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.TabIndex = 1
         PictureBox3.TabStop = False
@@ -139,9 +141,9 @@ Partial Class Dashboard
         Label7.AutoSize = True
         Label7.Font = New Font("Calibri", 10F)
         Label7.ForeColor = Color.White
-        Label7.Location = New Point(229, 23)
+        Label7.Location = New Point(262, 31)
         Label7.Name = "Label7"
-        Label7.Size = New Size(91, 17)
+        Label7.Size = New Size(111, 21)
         Label7.TabIndex = 2
         Label7.Text = "7 Hari Terakhir"
         ' 
@@ -150,9 +152,9 @@ Partial Class Dashboard
         Label6.AutoSize = True
         Label6.Font = New Font("Calibri", 40F, FontStyle.Bold)
         Label6.ForeColor = Color.White
-        Label6.Location = New Point(14, 42)
+        Label6.Location = New Point(16, 56)
         Label6.Name = "Label6"
-        Label6.Size = New Size(55, 66)
+        Label6.Size = New Size(69, 82)
         Label6.TabIndex = 1
         Label6.Text = "0"
         ' 
@@ -161,9 +163,9 @@ Partial Class Dashboard
         Label5.AutoSize = True
         Label5.Font = New Font("Calibri", 20F, FontStyle.Bold)
         Label5.ForeColor = Color.White
-        Label5.Location = New Point(14, 9)
+        Label5.Location = New Point(16, 12)
         Label5.Name = "Label5"
-        Label5.Size = New Size(155, 33)
+        Label5.Size = New Size(197, 41)
         Label5.TabIndex = 0
         Label5.Text = "PELANGGAN"
         ' 
@@ -172,9 +174,9 @@ Partial Class Dashboard
         Label9.AutoSize = True
         Label9.Font = New Font("Calibri", 40F, FontStyle.Bold)
         Label9.ForeColor = Color.White
-        Label9.Location = New Point(14, 42)
+        Label9.Location = New Point(16, 56)
         Label9.Name = "Label9"
-        Label9.Size = New Size(55, 66)
+        Label9.Size = New Size(69, 82)
         Label9.TabIndex = 1
         Label9.Text = "0"
         ' 
@@ -183,9 +185,9 @@ Partial Class Dashboard
         Label10.AutoSize = True
         Label10.Font = New Font("Calibri", 20F, FontStyle.Bold)
         Label10.ForeColor = Color.White
-        Label10.Location = New Point(14, 9)
+        Label10.Location = New Point(16, 12)
         Label10.Name = "Label10"
-        Label10.Size = New Size(190, 33)
+        Label10.Size = New Size(241, 41)
         Label10.TabIndex = 0
         Label10.Text = "DALAM PROSES"
         ' 
@@ -196,17 +198,19 @@ Partial Class Dashboard
         pnlProses.Controls.Add(Label8)
         pnlProses.Controls.Add(Label9)
         pnlProses.Controls.Add(Label10)
-        pnlProses.Location = New Point(481, 97)
+        pnlProses.Location = New Point(550, 129)
+        pnlProses.Margin = New Padding(3, 4, 3, 4)
         pnlProses.Name = "pnlProses"
-        pnlProses.Size = New Size(320, 188)
+        pnlProses.Size = New Size(366, 251)
         pnlProses.TabIndex = 9
         ' 
         ' PictureBox4
         ' 
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(229, 100)
+        PictureBox4.Location = New Point(262, 133)
+        PictureBox4.Margin = New Padding(3, 4, 3, 4)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(85, 85)
+        PictureBox4.Size = New Size(97, 113)
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox4.TabIndex = 1
         PictureBox4.TabStop = False
@@ -216,9 +220,9 @@ Partial Class Dashboard
         Label8.AutoSize = True
         Label8.Font = New Font("Calibri", 10F)
         Label8.ForeColor = Color.White
-        Label8.Location = New Point(229, 23)
+        Label8.Location = New Point(262, 31)
         Label8.Name = "Label8"
-        Label8.Size = New Size(91, 17)
+        Label8.Size = New Size(111, 21)
         Label8.TabIndex = 2
         Label8.Text = "7 Hari Terakhir"
         ' 
@@ -227,9 +231,9 @@ Partial Class Dashboard
         Label11.AutoSize = True
         Label11.Font = New Font("Calibri", 10F)
         Label11.ForeColor = Color.White
-        Label11.Location = New Point(229, 23)
+        Label11.Location = New Point(262, 31)
         Label11.Name = "Label11"
-        Label11.Size = New Size(91, 17)
+        Label11.Size = New Size(111, 21)
         Label11.TabIndex = 2
         Label11.Text = "7 Hari Terakhir"
         ' 
@@ -238,9 +242,9 @@ Partial Class Dashboard
         Label12.AutoSize = True
         Label12.Font = New Font("Calibri", 40F, FontStyle.Bold)
         Label12.ForeColor = Color.White
-        Label12.Location = New Point(14, 42)
+        Label12.Location = New Point(16, 56)
         Label12.Name = "Label12"
-        Label12.Size = New Size(55, 66)
+        Label12.Size = New Size(69, 82)
         Label12.TabIndex = 1
         Label12.Text = "0"
         ' 
@@ -249,9 +253,9 @@ Partial Class Dashboard
         Label13.AutoSize = True
         Label13.Font = New Font("Calibri", 20F, FontStyle.Bold)
         Label13.ForeColor = Color.White
-        Label13.Location = New Point(14, 9)
+        Label13.Location = New Point(16, 12)
         Label13.Name = "Label13"
-        Label13.Size = New Size(112, 33)
+        Label13.Size = New Size(141, 41)
         Label13.TabIndex = 0
         Label13.Text = "DIAMBIL"
         ' 
@@ -262,17 +266,19 @@ Partial Class Dashboard
         pnlDiambil.Controls.Add(Label11)
         pnlDiambil.Controls.Add(Label12)
         pnlDiambil.Controls.Add(Label13)
-        pnlDiambil.Location = New Point(900, 97)
+        pnlDiambil.Location = New Point(1029, 129)
+        pnlDiambil.Margin = New Padding(3, 4, 3, 4)
         pnlDiambil.Name = "pnlDiambil"
-        pnlDiambil.Size = New Size(320, 188)
+        pnlDiambil.Size = New Size(366, 251)
         pnlDiambil.TabIndex = 5
         ' 
         ' PictureBox5
         ' 
         PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
-        PictureBox5.Location = New Point(229, 100)
+        PictureBox5.Location = New Point(262, 133)
+        PictureBox5.Margin = New Padding(3, 4, 3, 4)
         PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(85, 85)
+        PictureBox5.Size = New Size(97, 113)
         PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox5.TabIndex = 1
         PictureBox5.TabStop = False
@@ -282,24 +288,27 @@ Partial Class Dashboard
         Panel1.Controls.Add(Panel3)
         Panel1.Dock = DockStyle.Left
         Panel1.Location = New Point(0, 0)
+        Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(48, 744)
+        Panel1.Size = New Size(55, 992)
         Panel1.TabIndex = 13
         ' 
         ' Panel3
         ' 
         Panel3.Dock = DockStyle.Fill
         Panel3.Location = New Point(0, 0)
+        Panel3.Margin = New Padding(3, 4, 3, 4)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(48, 744)
+        Panel3.Size = New Size(55, 992)
         Panel3.TabIndex = 16
         ' 
         ' Panel2
         ' 
         Panel2.Dock = DockStyle.Top
-        Panel2.Location = New Point(48, 0)
+        Panel2.Location = New Point(55, 0)
+        Panel2.Margin = New Padding(3, 4, 3, 4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(1264, 15)
+        Panel2.Size = New Size(1444, 20)
         Panel2.TabIndex = 14
         ' 
         ' pnlDashboard
@@ -307,16 +316,18 @@ Partial Class Dashboard
         pnlDashboard.Controls.Add(pnlChart)
         pnlDashboard.Controls.Add(Label2)
         pnlDashboard.Controls.Add(Label1)
-        pnlDashboard.Location = New Point(54, 314)
+        pnlDashboard.Location = New Point(62, 419)
+        pnlDashboard.Margin = New Padding(3, 4, 3, 4)
         pnlDashboard.Name = "pnlDashboard"
-        pnlDashboard.Size = New Size(847, 418)
+        pnlDashboard.Size = New Size(968, 557)
         pnlDashboard.TabIndex = 15
         ' 
         ' pnlChart
         ' 
-        pnlChart.Location = New Point(14, 61)
+        pnlChart.Location = New Point(16, 81)
+        pnlChart.Margin = New Padding(3, 4, 3, 4)
         pnlChart.Name = "pnlChart"
-        pnlChart.Size = New Size(819, 345)
+        pnlChart.Size = New Size(936, 460)
         pnlChart.TabIndex = 2
         ' 
         ' Label2
@@ -324,10 +335,10 @@ Partial Class Dashboard
         Label2.AutoSize = True
         Label2.Dock = DockStyle.Right
         Label2.Font = New Font("Calibri", 17F)
-        Label2.Location = New Point(691, 0)
+        Label2.Location = New Point(771, 0)
         Label2.Name = "Label2"
-        Label2.Padding = New Padding(0, 5, 10, 0)
-        Label2.Size = New Size(156, 33)
+        Label2.Padding = New Padding(0, 7, 11, 0)
+        Label2.Size = New Size(197, 43)
         Label2.TabIndex = 1
         Label2.Text = "7 Hari Terakhir"
         ' 
@@ -338,8 +349,8 @@ Partial Class Dashboard
         Label1.Font = New Font("Calibri", 20F, FontStyle.Bold)
         Label1.Location = New Point(0, 0)
         Label1.Name = "Label1"
-        Label1.Padding = New Padding(10, 5, 0, 0)
-        Label1.Size = New Size(286, 38)
+        Label1.Padding = New Padding(11, 7, 0, 0)
+        Label1.Size = New Size(359, 48)
         Label1.TabIndex = 0
         Label1.Text = "Statistik Total Transaksi"
         ' 
@@ -349,9 +360,10 @@ Partial Class Dashboard
         Panel4.Controls.Add(Panel6)
         Panel4.Controls.Add(Panel5)
         Panel4.Controls.Add(Label3)
-        Panel4.Location = New Point(938, 314)
+        Panel4.Location = New Point(1072, 419)
+        Panel4.Margin = New Padding(3, 4, 3, 4)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(281, 418)
+        Panel4.Size = New Size(321, 557)
         Panel4.TabIndex = 16
         ' 
         ' Panel7
@@ -361,9 +373,10 @@ Partial Class Dashboard
         Panel7.Controls.Add(Label26)
         Panel7.Controls.Add(Label27)
         Panel7.Dock = DockStyle.Top
-        Panel7.Location = New Point(0, 258)
+        Panel7.Location = New Point(0, 341)
+        Panel7.Margin = New Padding(3, 4, 3, 4)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(281, 100)
+        Panel7.Size = New Size(321, 133)
         Panel7.TabIndex = 4
         ' 
         ' Button3
@@ -373,9 +386,10 @@ Partial Class Dashboard
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Calibri", 12F)
         Button3.ForeColor = Color.White
-        Button3.Location = New Point(191, 51)
+        Button3.Location = New Point(218, 68)
+        Button3.Margin = New Padding(3, 4, 3, 4)
         Button3.Name = "Button3"
-        Button3.Size = New Size(55, 31)
+        Button3.Size = New Size(63, 41)
         Button3.TabIndex = 4
         Button3.Text = "Cek"
         Button3.UseVisualStyleBackColor = False
@@ -384,9 +398,9 @@ Partial Class Dashboard
         ' 
         Label24.AutoSize = True
         Label24.Font = New Font("Calibri", 14F)
-        Label24.Location = New Point(191, 19)
+        Label24.Location = New Point(218, 25)
         Label24.Name = "Label24"
-        Label24.Size = New Size(60, 23)
+        Label24.Size = New Size(77, 29)
         Label24.TabIndex = 3
         Label24.Text = "Waktu"
         ' 
@@ -394,9 +408,9 @@ Partial Class Dashboard
         ' 
         Label26.AutoSize = True
         Label26.Font = New Font("Calibri", 14F)
-        Label26.Location = New Point(16, 51)
+        Label26.Location = New Point(18, 68)
         Label26.Name = "Label26"
-        Label26.Size = New Size(96, 23)
+        Label26.Size = New Size(125, 29)
         Label26.TabIndex = 1
         Label26.Text = "Total Harga"
         ' 
@@ -404,9 +418,9 @@ Partial Class Dashboard
         ' 
         Label27.AutoSize = True
         Label27.Font = New Font("Calibri", 14F)
-        Label27.Location = New Point(16, 19)
+        Label27.Location = New Point(18, 25)
         Label27.Name = "Label27"
-        Label27.Size = New Size(28, 23)
+        Label27.Size = New Size(34, 29)
         Label27.TabIndex = 0
         Label27.Text = "ID"
         ' 
@@ -417,9 +431,10 @@ Partial Class Dashboard
         Panel6.Controls.Add(Label22)
         Panel6.Controls.Add(Label23)
         Panel6.Dock = DockStyle.Top
-        Panel6.Location = New Point(0, 158)
+        Panel6.Location = New Point(0, 208)
+        Panel6.Margin = New Padding(3, 4, 3, 4)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(281, 100)
+        Panel6.Size = New Size(321, 133)
         Panel6.TabIndex = 3
         ' 
         ' Button2
@@ -429,9 +444,10 @@ Partial Class Dashboard
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Calibri", 12F)
         Button2.ForeColor = Color.White
-        Button2.Location = New Point(191, 51)
+        Button2.Location = New Point(218, 68)
+        Button2.Margin = New Padding(3, 4, 3, 4)
         Button2.Name = "Button2"
-        Button2.Size = New Size(55, 31)
+        Button2.Size = New Size(63, 41)
         Button2.TabIndex = 4
         Button2.Text = "Cek"
         Button2.UseVisualStyleBackColor = False
@@ -440,9 +456,9 @@ Partial Class Dashboard
         ' 
         Label20.AutoSize = True
         Label20.Font = New Font("Calibri", 14F)
-        Label20.Location = New Point(191, 19)
+        Label20.Location = New Point(218, 25)
         Label20.Name = "Label20"
-        Label20.Size = New Size(60, 23)
+        Label20.Size = New Size(77, 29)
         Label20.TabIndex = 3
         Label20.Text = "Waktu"
         ' 
@@ -450,9 +466,9 @@ Partial Class Dashboard
         ' 
         Label22.AutoSize = True
         Label22.Font = New Font("Calibri", 14F)
-        Label22.Location = New Point(16, 51)
+        Label22.Location = New Point(18, 68)
         Label22.Name = "Label22"
-        Label22.Size = New Size(96, 23)
+        Label22.Size = New Size(125, 29)
         Label22.TabIndex = 1
         Label22.Text = "Total Harga"
         ' 
@@ -460,9 +476,9 @@ Partial Class Dashboard
         ' 
         Label23.AutoSize = True
         Label23.Font = New Font("Calibri", 14F)
-        Label23.Location = New Point(16, 19)
+        Label23.Location = New Point(18, 25)
         Label23.Name = "Label23"
-        Label23.Size = New Size(28, 23)
+        Label23.Size = New Size(34, 29)
         Label23.TabIndex = 0
         Label23.Text = "ID"
         ' 
@@ -473,9 +489,10 @@ Partial Class Dashboard
         Panel5.Controls.Add(Label17)
         Panel5.Controls.Add(Label4)
         Panel5.Dock = DockStyle.Top
-        Panel5.Location = New Point(0, 58)
+        Panel5.Location = New Point(0, 75)
+        Panel5.Margin = New Padding(3, 4, 3, 4)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(281, 100)
+        Panel5.Size = New Size(321, 133)
         Panel5.TabIndex = 2
         ' 
         ' Button1
@@ -485,9 +502,10 @@ Partial Class Dashboard
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Calibri", 12F)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(191, 51)
+        Button1.Location = New Point(218, 68)
+        Button1.Margin = New Padding(3, 4, 3, 4)
         Button1.Name = "Button1"
-        Button1.Size = New Size(55, 31)
+        Button1.Size = New Size(63, 41)
         Button1.TabIndex = 4
         Button1.Text = "Cek"
         Button1.UseVisualStyleBackColor = False
@@ -496,9 +514,9 @@ Partial Class Dashboard
         ' 
         Label19.AutoSize = True
         Label19.Font = New Font("Calibri", 14F)
-        Label19.Location = New Point(191, 19)
+        Label19.Location = New Point(218, 25)
         Label19.Name = "Label19"
-        Label19.Size = New Size(60, 23)
+        Label19.Size = New Size(77, 29)
         Label19.TabIndex = 3
         Label19.Text = "Waktu"
         ' 
@@ -506,9 +524,9 @@ Partial Class Dashboard
         ' 
         Label17.AutoSize = True
         Label17.Font = New Font("Calibri", 14F)
-        Label17.Location = New Point(16, 51)
+        Label17.Location = New Point(18, 68)
         Label17.Name = "Label17"
-        Label17.Size = New Size(96, 23)
+        Label17.Size = New Size(125, 29)
         Label17.TabIndex = 1
         Label17.Text = "Total Harga"
         ' 
@@ -516,9 +534,9 @@ Partial Class Dashboard
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Calibri", 14F)
-        Label4.Location = New Point(16, 19)
+        Label4.Location = New Point(18, 25)
         Label4.Name = "Label4"
-        Label4.Size = New Size(28, 23)
+        Label4.Size = New Size(34, 29)
         Label4.TabIndex = 0
         Label4.Text = "ID"
         ' 
@@ -529,16 +547,16 @@ Partial Class Dashboard
         Label3.Font = New Font("Calibri", 20F, FontStyle.Bold)
         Label3.Location = New Point(0, 0)
         Label3.Name = "Label3"
-        Label3.Padding = New Padding(5, 5, 0, 20)
-        Label3.Size = New Size(217, 58)
+        Label3.Padding = New Padding(6, 7, 0, 27)
+        Label3.Size = New Size(273, 75)
         Label3.TabIndex = 1
         Label3.Text = "Pesanan Terdekat"
         ' 
         ' Dashboard
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1312, 744)
+        ClientSize = New Size(1499, 992)
         Controls.Add(Panel4)
         Controls.Add(pnlDashboard)
         Controls.Add(Panel2)
@@ -550,6 +568,7 @@ Partial Class Dashboard
         Controls.Add(pnlPelanggan)
         Controls.Add(pnlProses)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(3, 4, 3, 4)
         Name = "Dashboard"
         Text = "Dashboard"
         pnlPelanggan.ResumeLayout(False)
