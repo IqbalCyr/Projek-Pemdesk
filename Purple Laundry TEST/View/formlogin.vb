@@ -2,7 +2,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnmsk.Click
         KasirAktif = Nothing
         If TextBox1.Text = "" And TextBox2.Text = "" Then
-            MsgBox("Mohin isi data diri anda terlebih dahulu")
+            MsgBox("Mohon isi data diri anda terlebih dahulu")
         ElseIf TextBox1.Text = "" Then
             MsgBox("Nama Tidak Boleh Kosong")
 
@@ -17,7 +17,7 @@
             KasirAktif = sesiKasir
             MsgBox($"Selamat Datang kasir : {sesiKasir.Nama}")
             Me.Hide()
-            FormMenu.Show()
+            MenuUtama.Show()
         End If
 
     End Sub
