@@ -1,12 +1,12 @@
 ﻿Imports MySql.Data.MySqlClient
-Module KasirDAO
+Module UsersDAO
     Function cekloginkasir(nama As String, password As String)
         Dim conn As MySqlConnection = getconn()
         Dim kasirAktif As Kasir = Nothing
         conn.Open()
         If conn IsNot Nothing Then
             Try
-                Dim querry As String = "SELECT id_kasir, nama,Password FROM kasir where nama = @nama;"
+                Dim querry As String = "SELECT id_User, username,nama_lengkap,no_hp,Password,alamat,role FROM users where username = @nama;"
 
                 Using cmd As New MySqlCommand(querry, conn)
                     cmd.Parameters.AddWithValue("@nama", nama)
@@ -17,9 +17,13 @@ Module KasirDAO
                             If String.Equals(password, passdb, StringComparison.OrdinalIgnoreCase) Then
 
                                 kasirAktif = New Kasir(
-                                    Convert.ToInt32(reader("id_kasir")),
-                                    reader("nama").ToString(),
-                                    reader("password").ToString()
+                                    Convert.ToInt32(reader("id_User")),
+                                    reader("username").ToString(),
+                                    reader("password").ToString(),
+                                    reader("role").ToString(),
+                                    reader("nama_lengkap").ToString(),
+                                    reader("no_hp").ToString(),
+                                    reader("alamat").ToString()
                                     )
                             Else
                                 MsgBox("Kata sandi salah!!!")

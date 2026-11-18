@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Menu
+Partial Class MenuUtama
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,8 +22,9 @@ Partial Class Menu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuUtama))
         Panel1 = New Panel()
+        Btn_Stok = New Button()
         btnKeluar = New Button()
         btnPengeluaran = New Button()
         btnLaporan = New Button()
@@ -41,7 +42,6 @@ Partial Class Menu
         Label3 = New Label()
         PictureBox2 = New PictureBox()
         Panel6 = New Panel()
-        Btn_Stok = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -66,8 +66,26 @@ Partial Class Menu
         Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(274, 1148)
+        Panel1.Size = New Size(274, 1055)
         Panel1.TabIndex = 0
+        ' 
+        ' Btn_Stok
+        ' 
+        Btn_Stok.Dock = DockStyle.Top
+        Btn_Stok.FlatAppearance.BorderSize = 0
+        Btn_Stok.FlatStyle = FlatStyle.Flat
+        Btn_Stok.Font = New Font("Calibri", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Btn_Stok.ForeColor = Color.White
+        Btn_Stok.Image = CType(resources.GetObject("Btn_Stok.Image"), Image)
+        Btn_Stok.Location = New Point(27, 616)
+        Btn_Stok.Name = "Btn_Stok"
+        Btn_Stok.Padding = New Padding(20, 0, 0, 0)
+        Btn_Stok.Size = New Size(216, 65)
+        Btn_Stok.TabIndex = 7
+        Btn_Stok.Text = " Stok"
+        Btn_Stok.TextAlign = ContentAlignment.MiddleLeft
+        Btn_Stok.TextImageRelation = TextImageRelation.ImageBeforeText
+        Btn_Stok.UseVisualStyleBackColor = True
         ' 
         ' btnKeluar
         ' 
@@ -77,7 +95,7 @@ Partial Class Menu
         btnKeluar.Font = New Font("Calibri", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnKeluar.ForeColor = Color.White
         btnKeluar.Image = CType(resources.GetObject("btnKeluar.Image"), Image)
-        btnKeluar.Location = New Point(27, 1049)
+        btnKeluar.Location = New Point(27, 956)
         btnKeluar.Margin = New Padding(3, 4, 3, 4)
         btnKeluar.Name = "btnKeluar"
         btnKeluar.Padding = New Padding(23, 0, 0, 0)
@@ -189,7 +207,7 @@ Partial Class Menu
         Panel4.Location = New Point(243, 181)
         Panel4.Margin = New Padding(3, 4, 3, 4)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(31, 967)
+        Panel4.Size = New Size(31, 874)
         Panel4.TabIndex = 1
         ' 
         ' Panel3
@@ -198,7 +216,7 @@ Partial Class Menu
         Panel3.Location = New Point(0, 181)
         Panel3.Margin = New Padding(3, 4, 3, 4)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(27, 967)
+        Panel3.Size = New Size(27, 874)
         Panel3.TabIndex = 1
         ' 
         ' Panel2
@@ -308,38 +326,20 @@ Partial Class Menu
         Panel6.Location = New Point(274, 52)
         Panel6.Margin = New Padding(3, 4, 3, 4)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(1536, 1096)
+        Panel6.Size = New Size(1536, 1003)
         Panel6.TabIndex = 3
         ' 
-        ' Btn_Stok
-        ' 
-        Btn_Stok.Dock = DockStyle.Top
-        Btn_Stok.FlatAppearance.BorderSize = 0
-        Btn_Stok.FlatStyle = FlatStyle.Flat
-        Btn_Stok.Font = New Font("Calibri", 12.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Btn_Stok.ForeColor = Color.White
-        Btn_Stok.Image = CType(resources.GetObject("Btn_Stok.Image"), Image)
-        Btn_Stok.Location = New Point(24, 461)
-        Btn_Stok.Name = "Btn_Stok"
-        Btn_Stok.Padding = New Padding(20, 0, 0, 0)
-        Btn_Stok.Size = New Size(189, 65)
-        Btn_Stok.TabIndex = 7
-        Btn_Stok.Text = " Stok"
-        Btn_Stok.TextAlign = ContentAlignment.MiddleLeft
-        Btn_Stok.TextImageRelation = TextImageRelation.ImageBeforeText
-        Btn_Stok.UseVisualStyleBackColor = True
-        ' 
-        ' Menu
+        ' MenuUtama
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(245), CByte(247), CByte(250))
-        ClientSize = New Size(1810, 1148)
+        ClientSize = New Size(1810, 1055)
         Controls.Add(Panel6)
         Controls.Add(Panel5)
         Controls.Add(Panel1)
         Margin = New Padding(3, 4, 3, 4)
-        Name = "Menu"
+        Name = "MenuUtama"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Menu"
         WindowState = FormWindowState.Maximized

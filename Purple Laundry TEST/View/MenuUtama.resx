@@ -120,16 +120,16 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Btn_Stok.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABxklEQVRIS52VPSiFYRTHL5LPLEIRSVFiMSkhi1IMrAaLkiwGs1LKIFIGg5FBGQwoCwMLJaWUkMWg
-        FElJ8vnTyXn1OPe57/ve+69T9z7nnP/v3uczASTSjDLPWMpIGgiJFmAf+ASWgFJPTVIkDXiiHFgGvvjV
-        CzAFFGo+y9MTC5ALjANPaizaAmo1Xw2sABdAr6c/EjDpGJ8A7TpeDMwAr05eJFNoPUIBs9q4BmTrVAwB
-        t8Y4UKfHwwvIA7odwJyOrxpDq1iAfuAa2HYA85rbM4ZWkQBZsEAbDuABGAUOnbxPkYArLZQ9LgsZAOIq
-        NqBDv08bgyi1WvMwQL7+ogXg3RhZ3QHDusuK4gDEtAL4ABaBNmDHmIredBpLnEP5COwCzWEA0b3zWRZZ
-        DlGfnlrRJlCvfT3AuVMvOosCWA0AB3olNGp9g25nn8QrCTAGPNtKlQDk74sEUKVTlEpegESlnodv0+AC
-        moA6k7dKCQhCttyR0yAnPABcAhNOzqdIgIRsu0HdgjkOII5iAWzcWJcQyfWeNiB4YOz6uJLcOlCTCSCI
-        LuDUOgPHeij/1dvmuCEPkDw+ck3IAzSiY7YuY0AQcusWeMb/4gcTkKcXjCOmCQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHGSURBVEhLnZU9
+        KIVhFMcvks8sQhFJUWIxKSGLUgysBouSLAazUsogUgaDkUEZDCgLAwslpZSQxaAUSUny+dPJefU497nv
+        +977r1P3Puec/+/e5zMBJNKMMs9YykgaCIkWYB/4BJaAUk9NUiQNeKIcWAa++NULMAUUaj7L0xMLkAuM
+        A09qLNoCajVfDawAF0Cvpz8SMOkYnwDtOl4MzACvTl4kU2g9QgGz2rgGZOtUDAG3xjhQp8fDC8gDuh3A
+        nI6vGkOrWIB+4BrYdgDzmtszhlaRAFmwQBsO4AEYBQ6dvE+RgCstlD0uCxkA4io2oEO/TxuDKLVa8zBA
+        vv6iBeDdGFndAcO6y4riAMS0AvgAFoE2YMeYit50GkucQ/kI7ALNYQDRvfNZFlkOUZ+eWtEmUK99PcC5
+        Uy86iwJYDQAHeiU0an2DbmefxCsJMAY820qVAOTviwRQpVOUSl6ARKWeh2/T4AKagDqTt0oJCEK23JHT
+        ICc8AFwCE07Op0iAhGy7Qd2COQ4gjmIBbNxYlxDJ9Z42IHhg7Pq4ktw6UJMJIIgu4NQ6A8d6KP/V2+a4
+        IQ+QPD5yTcgDNKJjti5jQBBy6xZ4xv/iBxOQpxeMI6YJAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnKeluar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

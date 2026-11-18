@@ -1,4 +1,4 @@
-﻿Public Class Menu
+﻿Public Class MenuUtama
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
@@ -91,6 +91,12 @@
     End Sub
 
     Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label3.Text = KasirAktif.Namalengkap
+        Label2.Text = KasirAktif.Role
+        Label4.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy", New System.Globalization.CultureInfo("id-ID"))
+
+
+
         Panel6.Controls.Clear()
         With Dashboard
             .TopLevel = False
