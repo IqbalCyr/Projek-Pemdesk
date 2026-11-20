@@ -84,7 +84,7 @@ Partial Class Dashboard
         Label16.AutoSize = True
         Label16.Font = New Font("Calibri", 18F)
         Label16.ForeColor = Color.Black
-        Label16.Location = New Point(243, 59)
+        Label16.Location = New Point(257, 59)
         Label16.Name = "Label16"
         Label16.Size = New Size(88, 37)
         Label16.TabIndex = 12
@@ -313,6 +313,7 @@ Partial Class Dashboard
         ' 
         ' pnlDashboard
         ' 
+        pnlDashboard.BorderStyle = BorderStyle.FixedSingle
         pnlDashboard.Controls.Add(pnlChart)
         pnlDashboard.Controls.Add(Label2)
         pnlDashboard.Controls.Add(Label1)
@@ -335,7 +336,7 @@ Partial Class Dashboard
         Label2.AutoSize = True
         Label2.Dock = DockStyle.Right
         Label2.Font = New Font("Calibri", 17F)
-        Label2.Location = New Point(771, 0)
+        Label2.Location = New Point(769, 0)
         Label2.Name = "Label2"
         Label2.Padding = New Padding(0, 7, 11, 0)
         Label2.Size = New Size(197, 43)
@@ -356,6 +357,7 @@ Partial Class Dashboard
         ' 
         ' Panel4
         ' 
+        Panel4.BorderStyle = BorderStyle.FixedSingle
         Panel4.Controls.Add(Panel7)
         Panel4.Controls.Add(Panel6)
         Panel4.Controls.Add(Panel5)
@@ -376,7 +378,7 @@ Partial Class Dashboard
         Panel7.Location = New Point(0, 341)
         Panel7.Margin = New Padding(3, 4, 3, 4)
         Panel7.Name = "Panel7"
-        Panel7.Size = New Size(321, 133)
+        Panel7.Size = New Size(319, 133)
         Panel7.TabIndex = 4
         ' 
         ' Button3
@@ -434,7 +436,7 @@ Partial Class Dashboard
         Panel6.Location = New Point(0, 208)
         Panel6.Margin = New Padding(3, 4, 3, 4)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(321, 133)
+        Panel6.Size = New Size(319, 133)
         Panel6.TabIndex = 3
         ' 
         ' Button2
@@ -492,7 +494,7 @@ Partial Class Dashboard
         Panel5.Location = New Point(0, 75)
         Panel5.Margin = New Padding(3, 4, 3, 4)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(321, 133)
+        Panel5.Size = New Size(319, 133)
         Panel5.TabIndex = 2
         ' 
         ' Button1
