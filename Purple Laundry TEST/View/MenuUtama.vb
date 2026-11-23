@@ -71,7 +71,23 @@
     End Sub
 
     Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnPengeluaran.Click
+        Panel6.Controls.Clear()
+        With Pengeluaran
+            .TopLevel = False
+            Panel6.Controls.Add(Pengeluaran)
+            .BringToFront()
+            .Show()
+        End With
+    End Sub
 
+    Private Sub Btn_Stok_Click(sender As Object, e As EventArgs) Handles Btn_Stok.Click
+        Panel6.Controls.Clear()
+        With Stok
+            .TopLevel = False
+            Panel6.Controls.Add(Stok)
+            .BringToFront()
+            .Show()
+        End With
     End Sub
 
     Private Sub btnKeluar_Click(sender As Object, e As EventArgs) Handles btnKeluar.Click
@@ -158,7 +174,4 @@
 
     End Sub
 
-    Private Sub Btn_Stok_Click(sender As Object, e As EventArgs) Handles Btn_Stok.Click
-
-    End Sub
 End Class
