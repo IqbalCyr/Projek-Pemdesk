@@ -304,6 +304,7 @@ Partial Class Dashboard
         ' 
         ' pnlDashboard
         ' 
+        pnlDashboard.BorderStyle = BorderStyle.FixedSingle
         pnlDashboard.Controls.Add(pnlChart)
         pnlDashboard.Controls.Add(Label2)
         pnlDashboard.Controls.Add(Label1)
@@ -345,6 +346,7 @@ Partial Class Dashboard
         ' 
         ' Panel4
         ' 
+        Panel4.BorderStyle = BorderStyle.FixedSingle
         Panel4.Controls.Add(Panel7)
         Panel4.Controls.Add(Panel6)
         Panel4.Controls.Add(Panel5)

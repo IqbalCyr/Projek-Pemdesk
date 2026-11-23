@@ -22,9 +22,15 @@ Partial Class design1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "design1"
+        SuspendLayout()
+        ' 
+        ' design1
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(918, 413)
+        Name = "design1"
+        Text = "design1"
+        ResumeLayout(False)
     End Sub
 End Class

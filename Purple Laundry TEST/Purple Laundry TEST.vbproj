@@ -37,6 +37,7 @@
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="26.10.0" />
+    <PackageReference Include="WinForms.DataVisualization" Version="1.10.2" />
   </ItemGroup>
 
   <ItemGroup>
