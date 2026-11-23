@@ -35,10 +35,10 @@ Partial Class customer
         Label15 = New Label()
         txtCari = New TextBox()
         DataGridView1 = New DataGridView()
-        ContextMenuStrip1 = New ContextMenuStrip(components)
         colomnNama = New DataGridViewTextBoxColumn()
         colomnNoHp = New DataGridViewTextBoxColumn()
         colomnAksi = New DataGridViewButtonColumn()
+        ContextMenuStrip1 = New ContextMenuStrip(components)
         Panel3.SuspendLayout()
         Panel4.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -165,11 +165,6 @@ Partial Class customer
         DataGridView1.Size = New Size(1278, 477)
         DataGridView1.TabIndex = 0
         ' 
-        ' ContextMenuStrip1
-        ' 
-        ContextMenuStrip1.Name = "ContextMenuStrip1"
-        ContextMenuStrip1.Size = New Size(61, 4)
-        ' 
         ' colomnNama
         ' 
         colomnNama.HeaderText = "Nama Pelanggan"
@@ -188,6 +183,11 @@ Partial Class customer
         colomnAksi.Name = "colomnAksi"
         colomnAksi.Text = "EDIT"
         colomnAksi.Width = 395
+        ' 
+        ' ContextMenuStrip1
+        ' 
+        ContextMenuStrip1.Name = "ContextMenuStrip1"
+        ContextMenuStrip1.Size = New Size(61, 4)
         ' 
         ' customer
         ' 
