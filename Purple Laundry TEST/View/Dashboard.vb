@@ -1,6 +1,7 @@
 ﻿Public Class Dashboard
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label16.Text = KasirAktif.Namalengkap
+        TampilkanFormKePanel(New design1(), pnlChart)
 
     End Sub
 
@@ -192,5 +193,21 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
+    End Sub
+
+
+
+
+    'procedure 
+    Private Sub TampilkanFormKePanel(frm As Form, targetPanel As Panel)
+        ' Hapus kontrol lama jika panel dipakai bergantian (opsional)
+        ' targetPanel.Controls.Clear()
+
+        frm.TopLevel = False
+        frm.FormBorderStyle = FormBorderStyle.None
+        frm.Dock = DockStyle.Fill
+
+        targetPanel.Controls.Add(frm)
+        frm.Show()
     End Sub
 End Class

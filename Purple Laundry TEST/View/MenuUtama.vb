@@ -33,8 +33,10 @@
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
         Panel6.Controls.Clear()
+        Panel6.AutoScroll = True
         With Dashboard
             .TopLevel = False
+            .AutoScroll = True
             Panel6.Controls.Add(Dashboard)
             .BringToFront()
             .Show()
@@ -110,7 +112,7 @@
         Label3.Text = KasirAktif.Namalengkap
         Label2.Text = KasirAktif.Role
         Label4.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy", New System.Globalization.CultureInfo("id-ID"))
-
+        AutoScroll = True
 
 
         Panel6.Controls.Clear()

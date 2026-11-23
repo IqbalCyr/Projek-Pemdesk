@@ -7,55 +7,37 @@ Public Class design1
     Inherits Form
 
     Private WithEvents pnlContainer As Panel
-    Private lblJudul As Label
-    Private lblSubJudul As Label
+
     Private chartTransaksi As Chart
 
     Public Sub New()
-        ' Pengaturan ukuran dan tampilan dasar Form (936 x 460)
         Me.Text = "Statistik Total Transaksi"
-        Me.ClientSize = New Size(936, 460)
-        Me.BackColor = Color.FromArgb(244, 247, 250) ' Latar belakang abu-abu muda dashboard
+        Me.ClientSize = New Size(968, 557)
+        Me.BackColor = Color.FromArgb(244, 247, 250)
+
         Me.StartPosition = FormStartPosition.CenterScreen
 
         InisialisasiKomponen()
-        MuatDataDummy() ' Ganti fungsi ini dengan query database Anda
+        MuatDataDummy()
     End Sub
 
     Private Sub InisialisasiKomponen()
-        ' 1. Panel Kartu Putih (Container) disesuaikan dengan Form 936x460
+        ' 1. Panel Kartu Putih mengisi seluruh area Form (dikurangi Padding 16px)
         pnlContainer = New Panel() With {
-            .Size = New Size(896, 420),
-            .Location = New Point(20, 20),
+            .Dock = DockStyle.Fill,
             .BackColor = Color.White,
             .Padding = New Padding(20)
         }
         Me.Controls.Add(pnlContainer)
 
-        ' 2. Label Judul ("Statistik Total Transaksi")
-        lblJudul = New Label() With {
-            .Text = "Statistik Total Transaksi",
-            .Font = New Font("Segoe UI", 12, FontStyle.Bold),
-            .ForeColor = Color.FromArgb(50, 60, 70),
-            .AutoSize = True,
-            .Location = New Point(24, 20)
-        }
-        pnlContainer.Controls.Add(lblJudul)
+        ' 2. Label Judul tetap di kiri atas
 
-        ' 3. Label Subjudul ("7 Hari Terakhir") rata kanan mengikuti lebar panel
-        lblSubJudul = New Label() With {
-            .Text = "7 Hari Terakhir",
-            .Font = New Font("Segoe UI", 9, FontStyle.Regular),
-            .ForeColor = Color.Gray,
-            .AutoSize = True,
-            .Location = New Point(780, 24)
-        }
-        pnlContainer.Controls.Add(lblSubJudul)
 
-        ' 4. Kontrol Chart mengisi ruang dalam panel kartu
+        ' 4. Chart otomatis melebar & memanjang mengikuti pnlContainer (Anchor ke 4 sisi)
         chartTransaksi = New Chart() With {
             .Location = New Point(15, 60),
-            .Size = New Size(866, 345),
+            .Size = New Size(pnlContainer.ClientSize.Width - 30, pnlContainer.ClientSize.Height - 75),
+            .Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right,
             .BackColor = Color.White
         }
 
@@ -131,6 +113,9 @@ Public Class design1
         path.CloseAllFigures()
 
         pnlContainer.Region = New Region(path)
+    End Sub
+    Private Sub pnlContainer_Resize(sender As Object, e As EventArgs) Handles pnlContainer.Resize
+        pnlContainer.Invalidate()
     End Sub
 
 End Class
